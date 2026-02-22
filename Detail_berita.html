@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Detail Berita - Asrama Sunan Gunung Jati</title>
+    <!-- Google Fonts & Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Theme Configuration -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0fbd55", // Bright green
+                        "primary-dark": "#0a7d3a", // Darker green for deep vibes
+                        "primary-gold": "#D4AF37", // Gold for accents
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#102217",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a3525",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                    animation: {
+                        'float': 'float 15s infinite linear',
+                        'float-delayed': 'float 20s infinite linear reverse',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%': { transform: 'translateY(0) rotate(0deg)' },
+                            '50%': { transform: 'translateY(-20px) rotate(10deg)' },
+                            '100%': { transform: 'translateY(0) rotate(0deg)' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Custom styles for elements not covered by Tailwind utilities */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .drop-cap::first-letter {
+            float: left;
+            font-size: 3.5rem;
+            line-height: 0.85;
+            font-weight: 800;
+            padding-right: 0.75rem;
+            padding-top: 0.25rem;
+            color: #0fbd55;
+            /* Primary color */
+        }
+
+        .floating-icon {
+            position: absolute;
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Typography improvements for article body */
+        .article-content h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: #0d1b13;
+        }
+
+        .dark .article-content h2 {
+            color: #f1f5f9;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: #334155;
+        }
+
+        .dark .article-content p {
+            color: #cbd5e1;
+        }
+
+        .article-content blockquote {
+            border-left: 4px solid #D4AF37;
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: #475569;
+            background: rgba(212, 175, 55, 0.05);
+            padding: 1.5rem;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+
+        .dark .article-content blockquote {
+            color: #94a3b8;
+            background: rgba(212, 175, 55, 0.1);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased min-h-screen flex flex-col overflow-x-hidden relative">
+    <!-- ANIMATED BACKGROUND -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none select-none z-0">
+        <!-- Icons scattered in background -->
+        <span
+            class="material-symbols-outlined floating-icon text-slate-900 dark:text-white top-[10%] left-[5%] text-6xl animate-float">newspaper</span>
+        <span
+            class="material-symbols-outlined floating-icon text-slate-900 dark:text-white top-[20%] right-[10%] text-8xl animate-float-delayed">edit_note</span>
+        <span
+            class="material-symbols-outlined floating-icon text-slate-900 dark:text-white top-[45%] left-[15%] text-7xl animate-float">mic</span>
+        <span
+            class="material-symbols-outlined floating-icon text-slate-900 dark:text-white top-[60%] right-[20%] text-5xl animate-float-delayed">photo_camera</span>
+        <span
+            class="material-symbols-outlined floating-icon text-slate-900 dark:text-white bottom-[10%] left-[10%] text-8xl animate-float">history_edu</span>
+        <span
+            class="material-symbols-outlined floating-icon text-slate-900 dark:text-white top-[80%] right-[5%] text-6xl animate-float-delayed">campaign</span>
+    </div>
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 w-full border-b border-[#ebefed] bg-white px-4 md:px-10 py-3 shadow-sm">
+        <div class="mx-auto flex max-w-7xl items-center justify-between">
+            <div class="flex items-center gap-4 text-primary-dark">
+                <div class="flex items-center justify-center size-12 bg-[#1a472a] rounded-lg shadow-sm">
+                    <span class="material-symbols-outlined text-white text-3xl">mosque</span>
+                </div>
+                <div class="flex flex-col">
+                    <h2 class="text-[#1a472a] text-xl font-bold leading-tight tracking-tight">Asrama Sunan Gunung
+                        Jati</h2>
+                    <span class="text-gray-500 text-xs font-medium tracking-wide">Membangun Karakter Islami</span>
+                </div>
+            </div>
+            <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+                <nav class="flex items-center gap-8">
+                    <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold transition-colors"
+                        href="index.html">Home</a>
+                    <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold transition-colors"
+                        href="Profil.html">Profil</a>
+                    <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold transition-colors"
+                        href="Penghuni.html">Penghuni</a>
+                    <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold transition-colors"
+                        href="Kegiatan.html">Kegiatan</a>
+                    <a class="text-[#1a472a] text-sm font-bold border-b-2 border-[#d4af37] pb-0.5"
+                        href="Berita.html">Berita</a>
+                    <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold transition-colors"
+                        href="#Kontak">Kontak</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- MAIN CONTENT WRAPPER -->
+    <main class="flex-grow z-10 w-full flex justify-center py-8 sm:py-12 px-4 sm:px-6">
+        <div class="w-full max-w-[960px] flex flex-col gap-8">
+            <!-- BREADCRUMBS -->
+            <nav class="flex flex-wrap items-center gap-2 text-sm">
+                <a class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors" href="#">Home</a>
+                <span class="material-symbols-outlined text-[12px] text-primary-gold">chevron_right</span>
+                <a class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors" href="#">Berita</a>
+                <span class="material-symbols-outlined text-[12px] text-primary-gold">chevron_right</span>
+                <span class="text-primary font-medium truncate max-w-[200px] sm:max-w-none">Kunjungan Rektor</span>
+            </nav>
+            <!-- ARTICLE HEADER -->
+            <div class="flex flex-col gap-6">
+                <!-- Title -->
+                <h1
+                    class="text-slate-900 dark:text-white text-3xl sm:text-4xl md:text-5xl font-black leading-tight tracking-tight">
+                    Kunjungan Rektor: Membangun Semangat Baru di Asrama Sunan Gunung Jati
+                </h1>
+                <!-- Metadata -->
+                <div
+                    class="flex flex-wrap items-center gap-4 text-sm sm:text-base border-b border-slate-200 dark:border-white/10 pb-6">
+                    <div class="flex items-center gap-2">
+                        <div
+                            class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary overflow-hidden">
+                            <img alt="Avatar Humas" class="w-full h-full object-cover" data-alt="Portrait of the author"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDavs_0T4HTHNIXm1J6iqor_ad2XCg_nA1mJraEop1d2b2eEEeM3EPnbQO-vyHkQV9qRS51Oyuge0QUP2FoX-Tq0AmVRCCiQabK3hEdvruU6vlOAw3ZtoWSZPboFSFsAJu8-OdMxNhxWo3n7_hjcRvPKshmesm0Sm0AYdSPbFtzsszfbpvwUISQbFGHDhZe8QSjKA0zdjj1X9LvLmnpbUaPDoZYoiQIdnEM0ndmqe1frzCIXvGadkFsscVXZ3qE97jul2SMUFoh1g" />
+                        </div>
+                        <span class="font-bold text-slate-800 dark:text-slate-200">Humas Asrama</span>
+                    </div>
+                    <span class="hidden sm:inline w-1 h-1 rounded-full bg-primary-gold"></span>
+                    <div class="flex items-center gap-1 text-slate-500 dark:text-slate-400">
+                        <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+                        <time datetime="2023-10-24">24 Oktober 2023</time>
+                    </div>
+                    <span class="hidden sm:inline w-1 h-1 rounded-full bg-primary-gold"></span>
+                    <div
+                        class="flex items-center gap-1 text-primary font-medium bg-primary/10 px-2 py-0.5 rounded text-xs uppercase tracking-wider">
+                        Berita Utama
+                    </div>
+                </div>
+            </div>
+            <!-- FEATURED IMAGE -->
+            <figure class="w-full">
+                <div class="relative w-full aspect-video sm:aspect-[21/9] overflow-hidden rounded-xl shadow-xl">
+                    <img alt="Suasana kunjungan rektor di aula utama"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                        data-alt="Large hall filled with students attending a lecture or speech"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEByhBL6I9tQOxEGuXkYKJ4cGJzvKNmEH09uwK0MfHFlL48fX-j-ncfXB7cAjSzbttKlZc-SZUz-i4fltk07vKklEVVAPOy4bI9AFrQHb8i50b3H5Gjaf3p12lNCY66gcjJA1qQAdtyrhUK8Ogqfktj2O1JF0Lp0AjaskW_e2uOFFRMzKZbudiAw4LX6XDvMPnsyrNFwhXPHaqLC262EBJ6JkvvRGmFnnoI_CQ9YlVylGl5Qr7LtvcPWexRp4Oz8hMGgek9gungg" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
+                </div>
+                <figcaption
+                    class="flex items-center gap-2 mt-3 text-sm text-slate-500 dark:text-slate-400 italic px-2 border-l-2 border-primary-gold">
+                    <span class="material-symbols-outlined text-[16px]">info</span>
+                    Suasana sambutan hangat para santri kepada Bapak Rektor di Aula Utama
+                </figcaption>
+            </figure>
+            <!-- ISI KONTEN BERITA -->
+            <article class="article-content max-w-[760px] mx-auto w-full text-lg leading-relaxed">
+                <p class="drop-cap mb-6 text-slate-700 dark:text-slate-300">
+                    Pada hari Selasa yang cerah, Asrama Sunan Gunung Jati menerima kunjungan istimewa dari Bapak Rektor.
+                    Kunjungan ini bukan sekadar formalitas tahunan, melainkan sebuah momentum strategis yang bertujuan
+                    untuk mempererat tali silaturahmi sekaligus meninjau secara langsung fasilitas asrama yang baru saja
+                    selesai direnovasi. Kehadiran beliau disambut dengan antusiasme tinggi oleh ratusan santri yang
+                    telah berkumpul sejak pagi hari di halaman utama asrama.
+                </p>
+                <p>
+                    Dalam sambutannya yang berdurasi sekitar 45 menit, Bapak Rektor menekankan pentingnya peran asrama
+                    sebagai <strong>"Kawah Candradimuka"</strong> bagi para mahasiswa. Beliau menyampaikan bahwa
+                    kesuksesan akademik di kampus harus diimbangi dengan kematangan karakter dan spiritualitas yang
+                    kuat, yang hanya bisa didapatkan melalui kehidupan berasrama yang disiplin dan penuh kebersamaan.
+                </p>
+                <blockquote>
+                    "Asrama bukan sekadar tempat tidur atau tempat singgah sementara. Ini adalah laboratorium kehidupan,
+                    tempat menempa jiwa, melatih toleransi, dan membangun fondasi kepemimpinan masa depan."
+                    <br />
+                    <span class="text-sm font-bold not-italic mt-2 block text-primary">— Prof. Dr. H. Ahmad Fauzi,
+                        M.Ag</span>
+                </blockquote>
+                <h2>Dialog Interaktif dengan Mahasiswa</h2>
+                <p>
+                    Acara dilanjutkan dengan sesi dialog interaktif. Para santri diberikan kesempatan untuk menyampaikan
+                    aspirasi, keluhan, dan ide-ide kreatif untuk pengembangan asrama. Beberapa isu yang diangkat antara
+                    lain mengenai peningkatan kecepatan akses internet untuk menunjang pembelajaran daring, serta
+                    penambahan fasilitas olahraga outdoor. Bapak Rektor merespons positif setiap masukan dan berjanji
+                    akan mengalokasikan anggaran khusus pada tahun ajaran mendatang.
+                </p>
+                <div
+                    class="my-8 rounded-lg overflow-hidden bg-surface-light dark:bg-surface-dark border border-slate-100 dark:border-white/5 shadow-sm p-4 flex gap-4 items-start">
+                    <span class="material-symbols-outlined text-primary text-3xl mt-1">lightbulb</span>
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-1">Poin Penting Kunjungan</h3>
+                        <ul class="list-disc list-inside space-y-1 text-base text-slate-600 dark:text-slate-300">
+                            <li>Peresmian Gedung Serbaguna Al-Kindi.</li>
+                            <li>Peluncuran program beasiswa "Santri Berprestasi".</li>
+                            <li>Komitmen perbaikan fasilitas Wi-Fi dan Ruang Baca.</li>
+                        </ul>
+                    </div>
+                </div>
+                <h2>Harapan ke Depan</h2>
+                <p>
+                    Menutup kunjungannya, Rektor berharap Asrama Sunan Gunung Jati dapat terus menjadi inkubator bagi
+                    lahirnya cendekiawan muslim yang moderat dan berdaya saing global. "Saya ingin melihat alumni dari
+                    asrama ini tidak hanya menjadi sarjana, tetapi menjadi solusi bagi permasalahan bangsa," pungkasnya
+                    diiringi tepuk tangan meriah.
+                </p>
+                <p>
+                    Kunjungan diakhiri dengan sholat Dzuhur berjamaah di Masjid Asrama dan ramah tamah sederhana dengan
+                    menu khas masakan dapur asrama yang legendaris.
+                </p>
+            </article>
+            <!-- SHARE & TAGS -->
+            <div class="max-w-[760px] mx-auto w-full border-t border-slate-200 dark:border-white/10 pt-8 mt-4">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-sm font-semibold text-slate-500 dark:text-slate-400 mr-2">Tags:</span>
+                        <a class="px-3 py-1 bg-slate-100 dark:bg-white/5 hover:bg-primary/10 hover:text-primary transition-colors rounded text-xs font-medium text-slate-600 dark:text-slate-300"
+                            href="#">#KunjunganRektor</a>
+                        <a class="px-3 py-1 bg-slate-100 dark:bg-white/5 hover:bg-primary/10 hover:text-primary transition-colors rounded text-xs font-medium text-slate-600 dark:text-slate-300"
+                            href="#">#AsramaJuara</a>
+                        <a class="px-3 py-1 bg-slate-100 dark:bg-white/5 hover:bg-primary/10 hover:text-primary transition-colors rounded text-xs font-medium text-slate-600 dark:text-slate-300"
+                            href="#">#Fasilitas</a>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-sm font-semibold text-slate-500 dark:text-slate-400">Share:</span>
+                        <button
+                            class="w-8 h-8 rounded-full bg-[#1877F2] text-white flex items-center justify-center hover:opacity-90 transition-opacity">
+                            <span class="material-symbols-outlined text-[18px]">share</span>
+                        </button>
+                        <button
+                            class="w-8 h-8 rounded-full bg-[#1DA1F2] text-white flex items-center justify-center hover:opacity-90 transition-opacity">
+                            <span class="material-symbols-outlined text-[18px]">post_add</span>
+                        </button>
+                        <button
+                            class="w-8 h-8 rounded-full bg-[#25D366] text-white flex items-center justify-center hover:opacity-90 transition-opacity">
+                            <span class="material-symbols-outlined text-[18px]">chat</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- RELATED NEWS SECTION -->
+    <section class="w-full bg-slate-50 dark:bg-[#0c1a12] border-t border-slate-200 dark:border-white/5 py-12 z-10">
+        <div class="max-w-[960px] mx-auto px-4 sm:px-6">
+            <div class="flex items-center justify-between mb-8">
+                <h3 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                    <span class="w-1.5 h-6 bg-primary rounded-full"></span>
+                    Berita Terkait
+                </h3>
+                <a class="text-primary hover:text-primary-dark font-medium text-sm flex items-center gap-1 transition-colors"
+                    href="#">
+                    Lihat Semua <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Related Card 1 -->
+                <a class="group flex flex-col sm:flex-row gap-4 bg-white dark:bg-surface-dark border border-slate-100 dark:border-white/5 rounded-xl p-4 shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300"
+                    href="#">
+                    <div class="w-full sm:w-1/3 aspect-video sm:aspect-square overflow-hidden rounded-lg">
+                        <img alt="Mahasiswa sedang belajar bersama di perpustakaan"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            data-alt="Students studying together in a library"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnkEcpv1SC3y0XTpIpPCxRPy3lr65b4I5fWYWFI5ETjGPITx3TQ1iya40yQ7ejrLlDlTa-sjQiRA6rzgl3ahi4FuI6zby2LseB9_jYpZ1CFvhG4vhkfM81rma08yhA3BKtEhob8Zodj9N2jkttewjiHENMyKlZ2yAlZE0rVBb3eev1Uie-YooMrUuNuepx5k0RI-BQP5bqOY17UJck4OCt3dS6VsX0f1_BaN1Wso16rYhXqyhzDjPK4XGpmtY4b0J2yo91484zNg" />
+                    </div>
+                    <div class="flex-1 flex flex-col justify-center">
+                        <div class="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 mb-2">
+                            <span class="material-symbols-outlined text-[14px]">event</span>
+                            <span>20 Okt 2023</span>
+                        </div>
+                        <h4
+                            class="font-bold text-lg text-slate-900 dark:text-white leading-tight mb-2 group-hover:text-primary transition-colors">
+                            Penerimaan Warga Baru Asrama Tahun 2024 Dibuka
+                        </h4>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-2">
+                            Simak syarat dan ketentuan pendaftaran untuk calon warga baru asrama tahun ajaran depan.
+                        </p>
+                    </div>
+                </a>
+                <!-- Related Card 2 -->
+                <a class="group flex flex-col sm:flex-row gap-4 bg-white dark:bg-surface-dark border border-slate-100 dark:border-white/5 rounded-xl p-4 shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300"
+                    href="#">
+                    <div class="w-full sm:w-1/3 aspect-video sm:aspect-square overflow-hidden rounded-lg">
+                        <img alt="Kegiatan kajian kitab kuning di masjid asrama"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            data-alt="Group of people sitting on floor reading books"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1vfk_AbTQ9jzq59Ds86DZnsebIz2SbKPBgFvD5zysM-u3R2W2y7NcLlEYIKkK8jfdoLROzfrxLzOEfw6WHEcYJXhLG1wHmEcpchE5-yUXpp-YSA9YhMA6PZPpaRjnCR8oah_tLtPZCBO6eU6f8gSmS07cttv2Nsy91T4ucC-1Qa-Pre4xE5lUo9Pr7XitFyd2rBTYoBYzMa6ZJv8OuJ7PLke0Hrec_tqKi5BnxyLY9DNLJAjnIFa3VyNsAiXgbC2jaDqDuDJUGg" />
+                    </div>
+                    <div class="flex-1 flex flex-col justify-center">
+                        <div class="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400 mb-2">
+                            <span class="material-symbols-outlined text-[14px]">event</span>
+                            <span>18 Okt 2023</span>
+                        </div>
+                        <h4
+                            class="font-bold text-lg text-slate-900 dark:text-white leading-tight mb-2 group-hover:text-primary transition-colors">
+                            Kegiatan Kajian Rutin Kitab Kuning Kembali Aktif
+                        </h4>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 line-clamp-2">
+                            Jadwal kajian mingguan bersama Ustadz senior untuk mendalami ilmu fiqih dan tasawuf.
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer id="Kontak" class="bg-background-dark pt-16 pb-8 text-white">
+        <div class="layout-container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Column 1: Brand -->
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="flex size-10 items-center justify-center rounded-lg bg-primary text-background-dark shadow-md">
+                            <span class="material-symbols-outlined">mosque</span>
+                        </div>
+                        <h2 class="text-lg font-bold">Asrama Sunan Gunung Jati</h2>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Wadah pembinaan mahasiswa yang mengintegrasikan nilai-nilai keislaman, keilmuan, dan
+                        keindonesiaan demi terwujudnya generasi emas peradaban.
+                    </p>
+                </div>
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6 text-white border-b border-primary/30 inline-block pb-1">
+                        Tautan Cepat</h3>
+                    <ul class="flex flex-col gap-3 text-sm text-slate-300">
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                href="profil.html"><span class="material-symbols-outlined text-xs">chevron_right</span>
+                                Profil</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                href="penghuni.html"><span
+                                    class="material-symbols-outlined text-xs">chevron_right</span> Penghuni</a></li>
+
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                href="kegiatan.html"><span
+                                    class="material-symbols-outlined text-xs">chevron_right</span> Kegiatan </a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                href="berita.html"><span class="material-symbols-outlined text-xs">chevron_right</span>
+                                Berita</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3: Contact Info -->
+                <div class="lg:col-span-2">
+                    <h3 class="text-lg font-bold mb-6 text-white border-b border-primary/30 inline-block pb-1">
+                        Hubungi Kami</h3>
+                    <ul class="flex flex-col gap-4 text-sm text-slate-300">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary mt-0.5">location_on</span>
+                            <span>Jl. Bunga No.21 11, RT.11/RW.9, Palmeriam, Kec. Matraman, Kota Jakarta Timur,
+                                Daerah Khusus Ibukota Jakarta 13140</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">call</span>
+                            <span>+6285779917483</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">mail</span>
+                            <a href="mailto:asramasunangunungjati@gmail.com"
+                                class="hover:text-primary transition-colors">
+                                asramasunangunungjati@gmail.com
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="flex gap-4 mt-6">
+                        <a class="flex size-10 items-center justify-center rounded-full bg-slate-800 text-white hover:bg-primary hover:text-background-dark transition-all"
+                            href="https://www.tiktok.com/@asrama1952" target="_blank">
+                            <svg class="size-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path
+                                    d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.17h0A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14z" />
+                            </svg>
+                        </a>
+
+                        <a class="flex size-10 items-center justify-center rounded-full bg-slate-800 text-white hover:bg-primary hover:text-background-dark transition-all"
+                            href="https://www.instagram.com/asramasunangunungjati_/" target="_blank"
+                            rel="noopener noreferrer">
+                            <svg class="size-5 fill-current" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.072 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+                <p>© 2026 Asrama Sunan Gunung Jati. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

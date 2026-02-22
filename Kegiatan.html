@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Kegiatan - Asrama Sunan Gunung Jati</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1B4D3E",
+                        "primary-light": "#2C6E58",
+                        "accent-gold": "#D4AF37",
+                        "accent-light": "#F2D06B",
+                        "text-dark": "#1F2937",
+                        "text-light": "#6B7280",
+                        "surface-light": "#FFFFFF",
+                        "background-dark": "#112218",
+                    },
+                    fontFamily: {
+                        "sans": ["Inter", "sans-serif"],
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                        "3xl": "2rem",
+                    },
+                    boxShadow: {
+                        "card": "0 10px 40px -10px rgba(0,0,0,0.08)",
+                        "card-hover": "0 20px 50px -12px rgba(0,0,0,0.15)",
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #1B4D3E;
+            border-radius: 4px;
+        }
+
+        .hero-pattern {
+            background-color: #1B4D3E;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 font-sans antialiased text-text-dark overflow-x-hidden">
+    <div class="relative flex min-h-screen w-full flex-col">
+        <header class="sticky top-0 z-50 w-full border-b border-[#ebefed] bg-white px-4 md:px-10 py-3 shadow-sm">
+            <div class="mx-auto flex max-w-7xl items-center justify-between">
+                <div class="flex items-center gap-4 text-primary-dark">
+                    <div class="flex items-center justify-center size-12 bg-[#1a472a] rounded-lg shadow-sm">
+                        <span class="material-symbols-outlined text-white text-3xl">mosque</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <h2 class="text-[#1a472a] text-xl font-bold leading-tight tracking-tight">Asrama Sunan Gunung
+                            Jati</h2>
+                        <span class="text-gray-500 text-xs font-medium tracking-wide">Membangun Karakter Islami</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+                    <nav class="flex items-center gap-8">
+                        <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold transition-colors"
+                            href="index.html">Home</a>
+                        <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold transition-colors"
+                            href="Profil.html">Profil</a>
+                        <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold transition-colors"
+                            href="Penghuni.html">Penghuni</a>
+                        <a class="text-[#1a472a] text-sm font-bold border-b-2 border-[#d4af37] pb-0.5"
+                            href="Kegiatan.html">Kegiatan</a>
+                        <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold transition-colors"
+                            href="Berita.html">Berita</a>
+                        <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold transition-colors"
+                            href="#Kontak">Kontak</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main class="flex-1">
+            <section class="relative h-[85vh] lg:h-[700px] flex items-center justify-center overflow-hidden">
+                <div class="absolute inset-0 z-0">
+                    <img alt="Students studying together" class="w-full h-full object-cover object-center"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrlQR4pjv_m_Vf9kFCtqFbeh-hBKD3nvgOGsAii5BZYLcdQyFcZrLXXhApjWZzz9oO9V35-V0njcmdtZjq3h4cHmDRf2exmNcG4GM2D6PSKcmWOwzgY57tZXuvXHQozizB2WEJ1M6Lnq-6O6LLa34fiaRkRutiTWhWclWFRdVsgbmEVGm8KryGD0gOKFe3RkiuOAAH-dPp84PUtJJlhb6isff3lSiGjPob_b3mdn5pcL6WRi1TKwYp3S0Y9k77RrFEkzxe5pjZrQ" />
+                    <div class="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/40"></div>
+                </div>
+                <div class="relative z-10 container mx-auto px-6 lg:px-12 flex flex-col justify-center h-full">
+                    <div class="max-w-4xl space-y-8 animate-fade-in-up">
+                        <div
+                            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-accent-light text-xs font-bold uppercase tracking-wider w-fit">
+                            <span class="size-2 rounded-full bg-accent-gold"></span>
+                            Dokumentasi Resmi
+                        </div>
+                        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1]">
+                            Menebar Manfaat, <span class="text-accent-gold">Membangun Umat</span>
+                        </h1>
+                        <p class="text-gray-200 text-lg md:text-xl font-light leading-relaxed max-w-3xl">
+                            Jelajahi rekam jejak kegiatan sosial dan keagamaan kami. Bukti nyata dedikasi Asrama Sunan
+                            Gunung Jati dalam melayani masyarakat dan membina generasi muda.
+                        </p>
+                        <div class="flex flex-wrap gap-4 pt-4">
+                            <button
+                                class="px-8 py-3.5 bg-white text-primary font-bold rounded-lg shadow-lg hover:bg-gray-100 transition-all flex items-center gap-2">
+                                Pelajari Lebih Lanjut
+                            </button>
+                            <button
+                                class="px-8 py-3.5 bg-transparent border border-white text-white font-bold rounded-lg hover:bg-white/10 transition-all flex items-center gap-2">
+                                <span class="material-symbols-outlined text-xl">play_circle</span>
+                                Lihat Video Profil
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-24 px-4 bg-white overflow-hidden">
+                <div class="container mx-auto px-4 lg:px-8">
+                    <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                        <div class="w-full lg:w-1/2 relative group">
+                            <div
+                                class="absolute -top-6 -left-6 w-full h-full border-2 border-accent-gold/30 rounded-3xl z-0 hidden lg:block">
+                            </div>
+                            <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl h-[400px] lg:h-[500px]">
+                                <img alt="Large crowd gathering for prayer"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzr_qax7_9jIFAtu2CBhLrL9a6ashLX92ne0SnWbWE0pD2Hwr-IEm0Njg_PukrM2JS2S50FvU4EwpD5aIkW673xddrGjYuIRWS7ESFikfCRVGRCn30OXtk-md7joQEKXvAPHcn7G-nk2WIbi6Ci7iSQ8OZF18B41hPbdnZcbTJ_a6ICUNuPDTO8ISCR1FDvRdxqC1IRdtqHr_Nn1NxewVVA3pYgBxLgRSdbo9rkMc7A45hm1rCXVAmFpV5jE7acqnxVB5uflga8A" />
+                                <div
+                                    class="absolute bottom-8 left-8 right-8 lg:right-auto bg-white/95 backdrop-blur-md p-6 rounded-2xl shadow-lg border-l-4 border-primary max-w-xs">
+                                    <div class="flex items-center gap-3 mb-1">
+                                        <span class="material-symbols-outlined text-primary text-3xl">groups</span>
+                                        <span class="text-3xl font-bold text-gray-900">500+</span>
+                                    </div>
+                                    <p class="text-sm text-gray-600 font-medium uppercase tracking-wide">Jamaah Hadir
+                                        Setiap Tahun</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-1/2 space-y-6">
+                            <span class="text-accent-gold font-bold tracking-widest uppercase text-sm">Peringatan Hari
+                                Besar Islam</span>
+                            <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                                Menghidupkan <br /><span class="text-primary">Syiar Islam</span>
+                            </h2>
+                            <p class="text-gray-600 text-lg leading-relaxed">
+                                Rangkaian kegiatan peringatan hari besar Islam yang diselenggarakan dengan khidmat. Kami
+                                melibatkan masyarakat sekitar dan alumni untuk mempererat tali silaturahmi serta
+                                meningkatkan keimanan melalui kajian, sholawat, dan doa bersama.
+                            </p>
+                            <div class="grid grid-cols-2 gap-4 mt-8">
+                                <div
+                                    class="h-32 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all cursor-pointer">
+                                    <img alt="Speaker"
+                                        class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3EehM3Zdoz60p42TkVn8tTbmo7AhZ_V4nqvNIahd2Pt3OZfYEXmPyWldm1q343lMghbS7VpTu5qva4wpdah5smCGV6EyRZoSPADmdETxkj0VUQoCpkraOONcdmry0TcOs-JaP1tjLC7SvhHTG0Iq0ZC5Qu2uxET3fHGxUs43q1b5s2MKTgtC0ew6_L10E62o9DSx0pm82FXl7dvJxHDdI_xcCAst8VUncsbEX_Wr521L1elyREmFu5OooMSIiS38pUMdi4vk8uQ" />
+                                </div>
+                                <div
+                                    class="h-32 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all cursor-pointer">
+                                    <img alt="Prayer"
+                                        class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ4QirY1irgpEa9w-osY7lnFiGhaYmQVvO2dpuz74krvEvFVSJu5sesRX9uw6Dxj1PqFduEi-GnQKsgMbzV-XWDw0124cEy79MEyff3SbwpMsSIt5osoQCp69yZRqyfeDM5NFy-TptUXRsoJbq7_98UhFNEuRmmo_KygCkbBtlcJFr1JkPrr4Prbdfz3y5mLzmbQVIAgAY-ly1llOKDK3gLVJQpe6T0_RC0z4HsMOuw--zgFrDu3XUC0lQkd24DQjP-oXvrkHSxw" />
+                                </div>
+                            </div>
+                            <div class="pt-4">
+                                <a class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all group"
+                                    href="#">
+                                    Lihat Dokumentasi Lengkap
+                                    <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-24 bg-primary text-white relative overflow-hidden">
+                <div class="absolute top-0 left-0 p-12 opacity-10">
+                    <svg fill="none" height="300" viewBox="0 0 300 300" width="300" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M150 0 L300 150 L150 300 L0 150 Z" stroke="white" stroke-width="2"></path>
+                    </svg>
+                </div>
+                <div class="container mx-auto px-4 lg:px-8 relative z-10">
+                    <div class="text-center max-w-3xl mx-auto mb-16">
+                        <div
+                            class="inline-flex items-center justify-center p-3 rounded-full bg-white/10 text-white mb-4">
+                            <span class="material-symbols-outlined">medical_services</span>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Bakti Sosial &amp; Kesehatan</h2>
+                        <p class="text-gray-200 text-lg">Program kepedulian nyata untuk masyarakat sekitar asrama.</p>
+                    </div>
+                    <div
+                        class="bg-white/5 border border-white/10 backdrop-blur-sm rounded-[2rem] shadow-xl overflow-hidden flex flex-col lg:flex-row">
+                        <div class="w-full lg:w-1/2 p-8 lg:p-16 flex flex-col justify-center">
+                            <div
+                                class="inline-block px-3 py-1 rounded bg-accent-gold text-primary-dark text-xs font-bold uppercase tracking-wider w-fit mb-4">
+                                Gratis 100%</div>
+                            <h3 class="text-3xl font-bold text-white mb-6">Sunatan Massal</h3>
+                            <p class="text-gray-200 mb-8 leading-relaxed">
+                                Program kesehatan gratis bagi anak-anak kurang mampu di lingkungan sekitar asrama.
+                                Dilaksanakan bekerjasama dengan tenaga medis profesional untuk menjamin keamanan dan
+                                kenyamanan. Setiap peserta mendapatkan bingkisan dan santunan.
+                            </p>
+                            <div class="grid grid-cols-2 gap-6 mb-8">
+                                <div class="flex flex-col">
+                                    <span class="text-3xl font-bold text-accent-gold">50+</span>
+                                    <span class="text-sm text-gray-300 font-medium">Anak Peserta/Tahun</span>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span class="text-3xl font-bold text-accent-gold">12</span>
+                                    <span class="text-sm text-gray-300 font-medium">Dokter &amp; Medis</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-1/2 bg-gray-900 relative min-h-[400px]">
+                            <img alt="Medical team" class="w-full h-full object-cover opacity-90"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4S22cW81wd84PopfzOMKeFS5CX8jGz9NV6u1sXs341Bz8Fw70VIddJwxJ7ys8wOIGBDoriv9avh07KyG6QtZix-FxyHubzk-yZSJl5qZtuyc3Nzm11JeGuj5cfS0Nfc3sZP3iELlBxOn45g7TGSY7yRCQMDMF1povutU0aYNcTY66zLvlpmvZw4HoRt8-q3x7TLp5oJ9-H-Qmf4bi7gnlXcoISEej1wayKIS7Qqjr7jYrGZ7hm27nph5eEl11kiERAwQfb5URHw" />
+                            <div class="absolute inset-0 bg-primary/20 mix-blend-overlay"></div>
+                            <div
+                                class="absolute -bottom-8 -left-8 w-48 h-48 rounded-2xl border-4 border-primary shadow-lg overflow-hidden hidden lg:block">
+                                <img alt="Happy child" class="w-full h-full object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqhd9C0Y1uRcGor2pYuUIqFFh3qYo3eh7QVdF8Oo2YeX0XqXpc0INFp8lyDC2JBIhCcALryo--bAkw5YhKsD7B3qjZM7otmxcg3DoILv1jSgniNHI50JDl-lY9ruEbcNvBlwAWmw16kDQgkHXd1BJRACGpMI0Niue2u0DzYho9tf_MWRVvZX_jx6WL5WvsrLh8kZBuWxOKBecRKiGimwK_wDUCpRezBu2R-P7J11nrNp9PXbPnEyy0Wss02H5UrrbErVlHv95txQ" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-24 bg-white relative overflow-hidden">
+                <div class="container mx-auto px-4 lg:px-8 relative z-10">
+                    <div class="flex flex-col lg:flex-row-reverse items-center gap-16">
+                        <div class="w-full lg:w-1/2 grid grid-cols-2 gap-4">
+                            <div class="space-y-4 mt-8">
+                                <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl bg-gray-100">
+                                    <img alt="Donation"
+                                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-TJ73bSIU-_rbHwxKSC12J3N9UjxdHCsRB9ZIqqkWjS-H-BZBrU3S_i-LSopNxsq7ctOoCCvC5KzSbUADOz0vAEfeIFQS2ldSb5uK3zVl93r5pm5qhyquctI59JMPHrb5HsrF25pca4KOw2axpv8jHhFXUL5LcEy3F5q09etvupiTc_8C2TkKSNMhiGax0E3NXeUY0Zg49P3JHyqqYimkPhDaJDuWWtTw7b4MXV0ccLTDQT309qM7fKS1UhfRTdN5aWMkDMCDrg" />
+                                </div>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="aspect-square rounded-2xl overflow-hidden shadow-2xl bg-gray-100">
+                                    <img alt="Praying children"
+                                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO33EAY_lhp-07fqxDwhwUqMoW3CS5x-mgyPM2Ayzd3OIZTqusAgkIiq6m3kX0xn_3yCaUUvzadmoWFyHr3bOd_BzOsXSBxrW4IihtR1wHK6zFaSv1fIuY9twOEXIBgp60ZMQ3hx6eNCF7IhvDr7MiF-m7Ru9XJYjJDYUz4Hw5wJdzVFSU1-Oa_-aNLSVd4Wnu5WRSKU3n40KIXwf4cDYJ5vZRmw03DC9bWt1Lw4Vja0Qq6eh_fkyqoVpGapAaPsASJxUZw0cH7A" />
+                                </div>
+                                <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl bg-gray-100">
+                                    <img alt="Happy children"
+                                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKhfBuKzpCObd9BVfWesyZsGfMHFU0MiVyiskAYEz7VDU9UVvez9E7e6_dR4He-ZWCB7YjT7bUbFOkYABGM6_SH5d_c13GfQF47mcDy9-Lb0A94Pfc3Mt2UyAcTp-Av-yA6XshqjPkAb89bxbZy3Q60puR8205C0UatHcd-dYfb4hue4CUTGNWETb2zQgQJYntBPxADb9Cr4xXeRO3BaEaDi2Jth4SJFUiHpaHst21RwslKifT_LUEL1bzTg9eEordgb0VmkKbaA" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-1/2">
+                            <div class="flex items-center gap-3 mb-6">
+                                <span class="h-px w-12 bg-accent-gold"></span>
+                                <span class="text-accent-gold font-bold tracking-widest uppercase text-sm">Kepedulian
+                                    Sosial</span>
+                            </div>
+                            <h2 class="text-4xl lg:text-5xl font-bold mb-6 text-gray-900">Santunan <br />Anak Yatim</h2>
+                            <p
+                                class="text-gray-500 text-lg leading-relaxed mb-8 font-light italic border-l-4 border-accent-gold pl-4">
+                                "Barangsiapa yang mengusap kepala anak yatim karena Allah, maka baginya kebaikan
+                                sebanyak helai rambut yang diusapnya."
+                            </p>
+                            <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                                Menyisihkan sebagian rezeki untuk mereka yang membutuhkan adalah komitmen bulanan kami.
+                                Kegiatan ini merupakan wujud nyata kepedulian keluarga besar asrama terhadap
+                                kesejahteraan anak-anak yatim piatu di sekitar lingkungan asrama.
+                            </p>
+                            <div class="bg-primary p-6 rounded-xl shadow-lg flex items-center justify-between">
+                                <div>
+                                    <p class="text-white font-bold text-lg">Program Bulanan</p>
+                                    <p class="text-white/80 text-sm">Rutin dilaksanakan setiap bulan</p>
+                                </div>
+                                <button
+                                    class="bg-accent-gold hover:bg-yellow-500 text-primary-dark font-bold py-2 px-6 rounded-lg transition-colors">
+                                    Ikut Donasi
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-24 bg-primary text-white">
+                <div class="container mx-auto px-4 lg:px-8">
+                    <div class="text-center max-w-3xl mx-auto mb-16">
+                        <span class="text-accent-gold font-bold tracking-widest uppercase text-xs mb-2 block">Bulan
+                            Penuh Berkah</span>
+                        <h2 class="text-4xl font-bold text-white mb-4">Semarak Syiar Ramadhan</h2>
+                        <div class="h-1 w-20 bg-accent-gold mx-auto rounded-full"></div>
+                    </div>
+                    <div class="grid lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-5 flex flex-col justify-center h-full space-y-8">
+                            <div
+                                class="p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
+                                <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-accent-gold">soup_kitchen</span>
+                                    Takjil Gratis
+                                </h3>
+                                <p class="text-gray-300 text-sm">Pembagian ratusan paket berbuka puasa setiap hari bagi
+                                    musafir dan masyarakat.</p>
+                            </div>
+                            <div
+                                class="p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
+                                <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-accent-gold">nights_stay</span>
+                                    Tarawih Berjamaah
+                                </h3>
+                                <p class="text-gray-300 text-sm">Menghidupkan malam Ramadhan dengan shalat tarawih,
+                                    tadarus, dan qiyamul lail.</p>
+                            </div>
+                            <div
+                                class="p-6 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
+                                <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-accent-gold">menu_book</span>
+                                    Khataman Al-Quran
+                                </h3>
+                                <p class="text-gray-300 text-sm">Target khatam Al-Quran bersama seluruh penghuni asrama
+                                    selama bulan suci.</p>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-7">
+                            <div class="grid grid-cols-2 gap-4 h-[500px]">
+                                <div
+                                    class="col-span-1 h-full rounded-2xl overflow-hidden relative group border border-white/10">
+                                    <img alt="Buka puasa"
+                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 hover:opacity-100"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1rbJTZBMWQaIDKBl6H6rZ-tf1xagzBFeJn_k_KtkmLlMP_NcHRPv1HzPfrvS385apUfbDgGFKGigb0dottiyNmnH4Ainb5hfhspysPv70f3UoKvPSN2sswGogUw7Gs02ZJK3HaX6goAX-JdwYgA3Dc8z4FHHkM0aUoz95ySAPRUzlaknlJXz6rlq5To2rshnoa4F-zxv5ZjW9V-yTvYyfjwOdxzPrcw647gA0Of0sfZmQzpR9z3fpeBDAlmdPu56q1S1NvCr85Q" />
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                                        <span class="text-white font-medium">Buka Puasa Bersama</span>
+                                    </div>
+                                </div>
+                                <div class="col-span-1 grid grid-rows-2 gap-4 h-full">
+                                    <div class="rounded-2xl overflow-hidden relative group border border-white/10">
+                                        <img alt="Tarawih"
+                                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 hover:opacity-100"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbX6ACFJLQ_e0wfuzi2tsF3LoH6RRjEXwNrseU7EVQiNw-vzbS-gRAk9wNuUve7CBNUIeUx2KAjKbRDGt-XcqTjqQfySVLXvDaNF12HMiFy7mS8Adn_UxqK4jaW1LHlKPuXX25mDGJYR_e8nY6YL5pAO7RjOTKzzEI7cHSL3Epm4JFAJ_a6a2UHB45Ptw02gzsTaXWNJB4r3z_Yf-nh2zZ6vkwnsud95HloXuNW7RMn9NjOLO8ooggUaJIYRmLfTSBGQ0KpyaZ1g" />
+                                    </div>
+                                    <div class="rounded-2xl overflow-hidden relative group border border-white/10">
+                                        <img alt="Takjil"
+                                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90 hover:opacity-100"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA9W0eohgzb073tkTgeN3gu_aZygZw3YSkfE7oca4A30tIqYJI6TrAt3urDSKzG3FgOLXFN4pgneuKGiUxdsuYtKRiohrK7y7iTzQQEsOe3VmNctmAQFNQERkNVuTXO3fOi6u6lMU5poJiG0ZW0sz9HxzWH8kx7J_DC307vZAKHjxrLoVWy2u3A0pXBvPxwi6SOr91BnM4yRJku8S_m78uoAd3H5lDfQEKk3Q6nrf0B3OqWPi6l0CHnlERa-33X3f1-LDy2ZZvcg" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div class="w-full bg-accent-gold py-8 px-4 z-20 relative">
+            <div
+                class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+                <div class="flex items-center gap-4">
+                    <div class="bg-white/20 p-3 rounded-full backdrop-blur-sm">
+                        <span class="material-symbols-outlined text-primary-dark text-4xl">diversity_1</span>
+                    </div>
+                    <div>
+                        <p class="text-primary-dark font-black text-2xl md:text-3xl leading-none">Total 500+ Penerima
+                            Manfaat</p>
+                        <p class="text-primary-dark/80 font-medium text-base mt-1">Telah terbantu melalui program kami
+                            sejak tahun 2020</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id="Kontak" class="bg-background-dark pt-16 pb-8 text-white">
+            <div class="layout-container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                    <!-- Column 1: Brand -->
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="flex size-10 items-center justify-center rounded-lg bg-primary text-background-dark shadow-md">
+                                <span class="material-symbols-outlined">mosque</span>
+                            </div>
+                            <h2 class="text-lg font-bold">Asrama Sunan Gunung Jati</h2>
+                        </div>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Wadah pembinaan mahasiswa yang mengintegrasikan nilai-nilai keislaman, keilmuan, dan
+                            keindonesiaan demi terwujudnya generasi emas peradaban.
+                        </p>
+                    </div>
+                    <!-- Column 2: Quick Links -->
+                    <div>
+                        <h3 class="text-lg font-bold mb-6 text-white border-b border-primary/30 inline-block pb-1">
+                            Tautan Cepat</h3>
+                        <ul class="flex flex-col gap-3 text-sm text-slate-300">
+                            <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                    href="profil.html"><span
+                                        class="material-symbols-outlined text-xs">chevron_right</span> Profil</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                    href="penghuni.html"><span
+                                        class="material-symbols-outlined text-xs">chevron_right</span> Penghuni</a></li>
+
+                            <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                    href="kegiatan.html"><span
+                                        class="material-symbols-outlined text-xs">chevron_right</span> Kegiatan </a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                    href="berita.html"><span
+                                        class="material-symbols-outlined text-xs">chevron_right</span> Berita</a></li>
+                        </ul>
+                    </div>
+                    <!-- Column 3: Contact Info -->
+                    <div class="lg:col-span-2">
+                        <h3 class="text-lg font-bold mb-6 text-white border-b border-primary/30 inline-block pb-1">
+                            Hubungi Kami</h3>
+                        <ul class="flex flex-col gap-4 text-sm text-slate-300">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary mt-0.5">location_on</span>
+                                <span>Jl. Bunga No.21 11, RT.11/RW.9, Palmeriam, Kec. Matraman, Kota Jakarta Timur,
+                                    Daerah Khusus Ibukota Jakarta 13140</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary">call</span>
+                                <span>+6285779917483</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary">mail</span>
+                                <a href="mailto:asramasunangunungjati@gmail.com"
+                                    class="hover:text-primary transition-colors">
+                                    asramasunangunungjati@gmail.com
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="flex gap-4 mt-6">
+                            <a class="flex size-10 items-center justify-center rounded-full bg-slate-800 text-white hover:bg-primary hover:text-background-dark transition-all"
+                                href="https://www.tiktok.com/@asrama1952" target="_blank">
+                                <svg class="size-5 fill-current" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512">
+                                    <path
+                                        d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.17h0A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14z" />
+                                </svg>
+                            </a>
+
+                            <a class="flex size-10 items-center justify-center rounded-full bg-slate-800 text-white hover:bg-primary hover:text-background-dark transition-all"
+                                href="https://www.instagram.com/asramasunangunungjati_/" target="_blank"
+                                rel="noopener noreferrer">
+                                <svg class="size-5 fill-current" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.072 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+                    <p>© 2026 Asrama Sunan Gunung Jati. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

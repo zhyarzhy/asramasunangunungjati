@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Berita - Asrama Sunan Gunung Jati</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#194d2e",
+                        "accent": "#D4AF37",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#141e18",
+                        "text-main": "#101814",
+                        "text-muted": "#5c8a6e",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                    animation: {
+                        'infinite-scroll': 'infinite-scroll 25s linear infinite',
+                    },
+                    keyframes: {
+                        'infinite-scroll': {
+                            from: { transform: 'translateX(0)' },
+                            to: { transform: 'translateX(-100%)' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .carousel-container {
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-text-main font-display antialiased min-h-screen flex flex-col">
+    <header class="sticky top-0 z-50 w-full border-b border-[#ebefed] bg-white px-4 md:px-10 py-3 shadow-sm">
+        <div class="mx-auto flex max-w-7xl items-center justify-between">
+            <div class="flex items-center gap-4 text-primary-dark">
+                <div class="flex items-center justify-center size-12 bg-[#1a472a] rounded-lg shadow-sm">
+                    <span class="material-symbols-outlined text-white text-3xl">mosque</span>
+                </div>
+                <div class="flex flex-col">
+                    <h2 class="text-[#1a472a] text-xl font-bold leading-tight tracking-tight">Asrama Sunan Gunung
+                        Jati</h2>
+                    <span class="text-gray-500 text-xs font-medium tracking-wide">Membangun Karakter Islami</span>
+                </div>
+            </div>
+            <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+                <nav class="flex items-center gap-8">
+                    <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold transition-colors"
+                        href="index.html">Home</a>
+                    <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold transition-colors"
+                        href="Profil.html">Profil</a>
+                    <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold transition-colors"
+                        href="Penghuni.html">Penghuni</a>
+                    <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold transition-colors"
+                        href="Kegiatan.html">Kegiatan</a>
+                    <a class="text-[#1a472a] text-sm font-bold border-b-2 border-[#d4af37] pb-0.5"
+                        href="Berita.html">Berita</a>
+                    <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold transition-colors"
+                        href="#Kontak">Kontak</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="flex-grow">
+        <section class="bg-primary relative overflow-hidden py-12 md:py-16">
+            <div class="absolute top-0 right-0 w-1/3 h-full bg-accent/5 -skew-x-12 transform origin-bottom-left"></div>
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-10 relative z-10">
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+                    <div>
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/20 border border-accent/30 text-accent text-xs font-bold uppercase tracking-wider mb-3">
+                            Agenda Asrama
+                        </div>
+                        <h1 class="text-3xl md:text-4xl font-bold text-white tracking-tight">Informasi Kegiatan Terdekat
+                        </h1>
+                        <p class="text-white/80 mt-2 max-w-2xl text-lg font-light">
+                            Jangan lewatkan berbagai kegiatan penting yang akan diselenggarakan dalam waktu dekat.
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-container w-full overflow-hidden">
+                    <div class="flex gap-6 w-max animate-infinite-scroll hover:[animation-play-state:paused]">
+                        <div
+                            class="w-[350px] md:w-[400px] bg-white rounded-xl p-5 shadow-lg border-l-4 border-accent hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row gap-5">
+                            <div
+                                class="flex-shrink-0 flex flex-col items-center justify-center bg-background-light rounded-lg w-full sm:w-20 h-20 sm:h-24 border border-gray-100">
+                                <span class="text-red-600 font-bold text-lg uppercase">Des</span>
+                                <span class="text-text-main font-black text-3xl leading-none">22</span>
+                                <span class="text-text-muted text-xs">2024</span>
+                            </div>
+                            <div class="flex-1 flex flex-col justify-center">
+                                <h3 class="text-lg font-bold text-text-main mb-2 leading-tight">Syukuran Akhir Tahun
+                                    &amp; Doa Bersama</h3>
+                                <div class="flex flex-col gap-1.5 text-sm text-text-muted">
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-base text-accent">schedule</span>
+                                        19:30 - 22:00 WIB
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-base text-accent">location_on</span>
+                                        Aula Utama Asrama
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="w-[350px] md:w-[400px] bg-white rounded-xl p-5 shadow-lg border-l-4 border-primary hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row gap-5">
+                            <div
+                                class="flex-shrink-0 flex flex-col items-center justify-center bg-background-light rounded-lg w-full sm:w-20 h-20 sm:h-24 border border-gray-100">
+                                <span class="text-red-600 font-bold text-lg uppercase">Jan</span>
+                                <span class="text-text-main font-black text-3xl leading-none">05</span>
+                                <span class="text-text-muted text-xs">2025</span>
+                            </div>
+                            <div class="flex-1 flex flex-col justify-center">
+                                <h3 class="text-lg font-bold text-text-main mb-2 leading-tight">Workshop Kepemimpinan
+                                    Islami</h3>
+                                <div class="flex flex-col gap-1.5 text-sm text-text-muted">
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-base text-primary">schedule</span>
+                                        08:00 - 15:00 WIB
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span
+                                            class="material-symbols-outlined text-base text-primary">location_on</span>
+                                        Ruang Seminar Lt. 2
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="w-[350px] md:w-[400px] bg-white rounded-xl p-5 shadow-lg border-l-4 border-accent hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row gap-5">
+                            <div
+                                class="flex-shrink-0 flex flex-col items-center justify-center bg-background-light rounded-lg w-full sm:w-20 h-20 sm:h-24 border border-gray-100">
+                                <span class="text-red-600 font-bold text-lg uppercase">Jan</span>
+                                <span class="text-text-main font-black text-3xl leading-none">12</span>
+                                <span class="text-text-muted text-xs">2025</span>
+                            </div>
+                            <div class="flex-1 flex flex-col justify-center">
+                                <h3 class="text-lg font-bold text-text-main mb-2 leading-tight">Kajian Fiqih Muamalah
+                                </h3>
+                                <div class="flex flex-col gap-1.5 text-sm text-text-muted">
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-base text-accent">schedule</span>
+                                        16:00 - 17:30 WIB
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-base text-accent">location_on</span>
+                                        Masjid Asrama
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="w-[350px] md:w-[400px] bg-white rounded-xl p-5 shadow-lg border-l-4 border-primary hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row gap-5">
+                            <div
+                                class="flex-shrink-0 flex flex-col items-center justify-center bg-background-light rounded-lg w-full sm:w-20 h-20 sm:h-24 border border-gray-100">
+                                <span class="text-red-600 font-bold text-lg uppercase">Jan</span>
+                                <span class="text-text-main font-black text-3xl leading-none">20</span>
+                                <span class="text-text-muted text-xs">2025</span>
+                            </div>
+                            <div class="flex-1 flex flex-col justify-center">
+                                <h3 class="text-lg font-bold text-text-main mb-2 leading-tight">Bakti Sosial Masyarakat
+                                </h3>
+                                <div class="flex flex-col gap-1.5 text-sm text-text-muted">
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-base text-primary">schedule</span>
+                                        07:00 - 12:00 WIB
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span
+                                            class="material-symbols-outlined text-base text-primary">location_on</span>
+                                        Desa Binaan
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div aria-hidden="true"
+                            class="w-[350px] md:w-[400px] bg-white rounded-xl p-5 shadow-lg border-l-4 border-accent hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row gap-5">
+                            <div
+                                class="flex-shrink-0 flex flex-col items-center justify-center bg-background-light rounded-lg w-full sm:w-20 h-20 sm:h-24 border border-gray-100">
+                                <span class="text-red-600 font-bold text-lg uppercase">Des</span>
+                                <span class="text-text-main font-black text-3xl leading-none">22</span>
+                                <span class="text-text-muted text-xs">2024</span>
+                            </div>
+                            <div class="flex-1 flex flex-col justify-center">
+                                <h3 class="text-lg font-bold text-text-main mb-2 leading-tight">Syukuran Akhir Tahun
+                                    &amp; Doa Bersama</h3>
+                                <div class="flex flex-col gap-1.5 text-sm text-text-muted">
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-base text-accent">schedule</span>
+                                        19:30 - 22:00 WIB
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-base text-accent">location_on</span>
+                                        Aula Utama Asrama
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div aria-hidden="true"
+                            class="w-[350px] md:w-[400px] bg-white rounded-xl p-5 shadow-lg border-l-4 border-primary hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row gap-5">
+                            <div
+                                class="flex-shrink-0 flex flex-col items-center justify-center bg-background-light rounded-lg w-full sm:w-20 h-20 sm:h-24 border border-gray-100">
+                                <span class="text-red-600 font-bold text-lg uppercase">Jan</span>
+                                <span class="text-text-main font-black text-3xl leading-none">05</span>
+                                <span class="text-text-muted text-xs">2025</span>
+                            </div>
+                            <div class="flex-1 flex flex-col justify-center">
+                                <h3 class="text-lg font-bold text-text-main mb-2 leading-tight">Workshop Kepemimpinan
+                                    Islami</h3>
+                                <div class="flex flex-col gap-1.5 text-sm text-text-muted">
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-base text-primary">schedule</span>
+                                        08:00 - 15:00 WIB
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span
+                                            class="material-symbols-outlined text-base text-primary">location_on</span>
+                                        Ruang Seminar Lt. 2
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div aria-hidden="true"
+                            class="w-[350px] md:w-[400px] bg-white rounded-xl p-5 shadow-lg border-l-4 border-accent hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row gap-5">
+                            <div
+                                class="flex-shrink-0 flex flex-col items-center justify-center bg-background-light rounded-lg w-full sm:w-20 h-20 sm:h-24 border border-gray-100">
+                                <span class="text-red-600 font-bold text-lg uppercase">Jan</span>
+                                <span class="text-text-main font-black text-3xl leading-none">12</span>
+                                <span class="text-text-muted text-xs">2025</span>
+                            </div>
+                            <div class="flex-1 flex flex-col justify-center">
+                                <h3 class="text-lg font-bold text-text-main mb-2 leading-tight">Kajian Fiqih Muamalah
+                                </h3>
+                                <div class="flex flex-col gap-1.5 text-sm text-text-muted">
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-base text-accent">schedule</span>
+                                        16:00 - 17:30 WIB
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-base text-accent">location_on</span>
+                                        Masjid Asrama
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div aria-hidden="true"
+                            class="w-[350px] md:w-[400px] bg-white rounded-xl p-5 shadow-lg border-l-4 border-primary hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row gap-5">
+                            <div
+                                class="flex-shrink-0 flex flex-col items-center justify-center bg-background-light rounded-lg w-full sm:w-20 h-20 sm:h-24 border border-gray-100">
+                                <span class="text-red-600 font-bold text-lg uppercase">Jan</span>
+                                <span class="text-text-main font-black text-3xl leading-none">20</span>
+                                <span class="text-text-muted text-xs">2025</span>
+                            </div>
+                            <div class="flex-1 flex flex-col justify-center">
+                                <h3 class="text-lg font-bold text-text-main mb-2 leading-tight">Bakti Sosial Masyarakat
+                                </h3>
+                                <div class="flex flex-col gap-1.5 text-sm text-text-muted">
+                                    <div class="flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-base text-primary">schedule</span>
+                                        07:00 - 12:00 WIB
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span
+                                            class="material-symbols-outlined text-base text-primary">location_on</span>
+                                        Desa Binaan
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-10 py-12">
+            <div
+                class="flex flex-col md:flex-row justify-between items-center mb-10 gap-4 border-b border-gray-200 pb-6">
+                <h2 class="text-text-main text-2xl font-bold">Berita Terbaru</h2>
+                <div class="flex flex-wrap gap-2 justify-center">
+                    <button
+                        class="px-4 py-2 rounded-lg bg-primary text-white text-sm font-medium shadow-sm transition-all">
+                        Semua
+                    </button>
+                    <button
+                        class="px-4 py-2 rounded-lg bg-white border border-gray-200 text-text-muted hover:text-primary hover:border-primary text-sm font-medium transition-all">
+                        Pengumuman
+                    </button>
+                    <button
+                        class="px-4 py-2 rounded-lg bg-white border border-gray-200 text-text-muted hover:text-primary hover:border-primary text-sm font-medium transition-all">
+                        Kegiatan
+                    </button>
+                    <button
+                        class="px-4 py-2 rounded-lg bg-white border border-gray-200 text-text-muted hover:text-primary hover:border-primary text-sm font-medium transition-all">
+                        Prestasi
+                    </button>
+                    <button
+                        class="px-4 py-2 rounded-lg bg-white border border-gray-200 text-text-muted hover:text-primary hover:border-primary text-sm font-medium transition-all">
+                        Opini
+                    </button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <article
+                    class="group bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300 flex flex-col overflow-hidden border border-gray-100">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="absolute top-3 left-3 z-10">
+                            <span
+                                class="px-3 py-1 bg-accent text-white text-xs font-bold rounded shadow-sm">Kegiatan</span>
+                        </div>
+                        <img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                            data-alt="People gathering in a hall discussing Islamic studies"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvtQOR710wh8dzj1hox7TpY7r6HMntazHKh8anBbx8OnoH2xyT6NlzB37Z3ehbCCLYsA2fYUXhur5Tj4C4VDcOhnGrBXkAb_FY--YXS26HjHdArMhsMj6U_Wd329JpCMgo0INIEsNOzMBc5n_Nt8T3vTZ03sFXb1aA8HTHrOjVO_7HIafiwgAgCgWI3nCPkjk31dolXcRiSRFf7y8UnKNZHuahd7wsEDMcKyY38wNDeGwW8GM0nx8PJB4ZoSO03EPuAr19LrBVvA" />
+                    </div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <div class="flex items-center gap-3 text-xs text-text-muted mb-3">
+                            <span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-[14px]">event</span> 12 Maret 2024</span>
+                            <span class="w-1 h-1 rounded-full bg-gray-300"></span>
+                            <span>Humas Asrama</span>
+                        </div>
+                        <h3
+                            class="text-lg font-bold text-text-main mb-3 leading-snug group-hover:text-primary transition-colors">
+                            Kajian Rutin Kitab Kuning Bersama Kyai H. Ahmad
+                        </h3>
+                        <p class="text-text-muted text-sm line-clamp-3 mb-4 flex-1 leading-relaxed">
+                            Kegiatan rutin mingguan ini bertujuan untuk memperdalam pemahaman agama santri melalui
+                            metode klasik yang telah teruji zaman. Para santri sangat antusias mengikuti...
+                        </p>
+                        <a class="inline-flex items-center text-primary text-sm font-bold hover:underline decoration-2 underline-offset-4"
+                            href="#">
+                            Baca Selengkapnya
+                        </a>
+                    </div>
+                </article>
+                <article
+                    class="group bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300 flex flex-col overflow-hidden border border-gray-100">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="absolute top-3 left-3 z-10">
+                            <span
+                                class="px-3 py-1 bg-primary text-white text-xs font-bold rounded shadow-sm">Pengumuman</span>
+                        </div>
+                        <img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                            data-alt="Traditional mosque architecture silhouette during sunset"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcb4P7WamyaXgqf2LOjODKQw--TQf5qsb9JmnSnPGkpAtWs8y8ln9n747s4BbNGGIqQZhcvnYeYXdQIH1S4vMFJ3kzdyEIPaIBoMS1boRQJrnyZ7tGlvHslgw5J8LEl0rOAnnAxPMXHRBp9FdRJ0mEXmNjtMUDKUCwYY0H7h2CQtTvUW7cz1XbL0T6U1x4jTFZPg9LSBVw-RCtzG-L1-gLEeR6FBtIUjlJ2AAoh4ynNbFyRuQyQ2JtkLGUkY6acCLWV398Jb8Y-Q" />
+                    </div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <div class="flex items-center gap-3 text-xs text-text-muted mb-3">
+                            <span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-[14px]">event</span> 10 Maret 2024</span>
+                            <span class="w-1 h-1 rounded-full bg-gray-300"></span>
+                            <span>Panitia Ramadhan</span>
+                        </div>
+                        <h3
+                            class="text-lg font-bold text-text-main mb-3 leading-snug group-hover:text-primary transition-colors">
+                            Jadwal Imsakiyah Ramadhan 1445 H untuk Lingkungan Asrama
+                        </h3>
+                        <p class="text-text-muted text-sm line-clamp-3 mb-4 flex-1 leading-relaxed">
+                            Menyambut bulan suci Ramadhan, pihak asrama telah merilis jadwal imsakiyah resmi yang akan
+                            digunakan sebagai acuan kegiatan ibadah selama satu bulan penuh.
+                        </p>
+                        <a class="inline-flex items-center text-primary text-sm font-bold hover:underline decoration-2 underline-offset-4"
+                            href="#">
+                            Baca Selengkapnya
+                        </a>
+                    </div>
+                </article>
+                <article
+                    class="group bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300 flex flex-col overflow-hidden border border-gray-100">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="absolute top-3 left-3 z-10">
+                            <span
+                                class="px-3 py-1 bg-accent text-white text-xs font-bold rounded shadow-sm">Prestasi</span>
+                        </div>
+                        <img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                            data-alt="Award trophy on a wooden table with blurred background"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJChqGkHx6tmc52X-sZdIODFdASVkYdc08wUVrYxbcHBq-_xc61Kfu8Jr5phyqVG6BR_aBE19DZMf6PnFLW_N19PoF1X3peyCEmUpo9JiIZx38BLslPCFpqo-SH9YW-rznqYh-gggDB3sjkOfMMfEXbKMiWFqTQpHjy7pCgZLd3r9in8VVajWEFZxQpMEvPARHIyl_7I0fZPCDQ0nZZ6xPCrcKKx6yEkVHKqPXgKdMU1D0xEZS31PN6JDxz8eBT-9c7NnN1C9teQ" />
+                    </div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <div class="flex items-center gap-3 text-xs text-text-muted mb-3">
+                            <span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-[14px]">event</span> 05 Maret 2024</span>
+                            <span class="w-1 h-1 rounded-full bg-gray-300"></span>
+                            <span>Humas Asrama</span>
+                        </div>
+                        <h3
+                            class="text-lg font-bold text-text-main mb-3 leading-snug group-hover:text-primary transition-colors">
+                            Santri Asrama Raih Juara 1 Lomba Kaligrafi Tingkat Provinsi
+                        </h3>
+                        <p class="text-text-muted text-sm line-clamp-3 mb-4 flex-1 leading-relaxed">
+                            Sebuah kebanggaan bagi keluarga besar asrama, ananda Faisal berhasil menyabet juara pertama
+                            dalam ajang kompetisi seni Islam tahunan.
+                        </p>
+                        <a class="inline-flex items-center text-primary text-sm font-bold hover:underline decoration-2 underline-offset-4"
+                            href="#">
+                            Baca Selengkapnya
+                        </a>
+                    </div>
+                </article>
+                <article
+                    class="group bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300 flex flex-col overflow-hidden border border-gray-100">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="absolute top-3 left-3 z-10">
+                            <span
+                                class="px-3 py-1 bg-accent text-white text-xs font-bold rounded shadow-sm">Kegiatan</span>
+                        </div>
+                        <img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                            data-alt="Community service cleaning activity outdoors"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgLQ2LT2TJh_vcVMQPDG12vr6VXeDw_mZM17R-9Wcp320O7lXOL3L-kJHLw6zXKK_NQmy6xZU2goO___9QioKDWxk3v4qjkedozdWt5RiqUQEA_npX0D608CRDhGzYLsVC8pDAHPXDgvRkeaRHgsjHcK1yTgeldtZTZYI_Cs8R_kZC-r_hGzLn3JX3vevr-la8a0Xhfdw_kYODaI2TaaH2_ZZ09bL2kVIj7bF7h-D4vUzQGgpHoLufOYgspj3BLDj5O74W3s9N-w" />
+                    </div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <div class="flex items-center gap-3 text-xs text-text-muted mb-3">
+                            <span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-[14px]">event</span> 01 Maret 2024</span>
+                            <span class="w-1 h-1 rounded-full bg-gray-300"></span>
+                            <span>Divisi Kebersihan</span>
+                        </div>
+                        <h3
+                            class="text-lg font-bold text-text-main mb-3 leading-snug group-hover:text-primary transition-colors">
+                            Kerja Bakti Akbar: Menjaga Kebersihan Lingkungan Asrama
+                        </h3>
+                        <p class="text-text-muted text-sm line-clamp-3 mb-4 flex-1 leading-relaxed">
+                            Seluruh warga asrama bahu membahu membersihkan lingkungan sekitar asrama untuk menciptakan
+                            suasana belajar yang nyaman dan sehat.
+                        </p>
+                        <a class="inline-flex items-center text-primary text-sm font-bold hover:underline decoration-2 underline-offset-4"
+                            href="#">
+                            Baca Selengkapnya
+                        </a>
+                    </div>
+                </article>
+                <article
+                    class="group bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300 flex flex-col overflow-hidden border border-gray-100">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="absolute top-3 left-3 z-10">
+                            <span
+                                class="px-3 py-1 bg-accent text-white text-xs font-bold rounded shadow-sm">Opini</span>
+                        </div>
+                        <img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                            data-alt="Pile of books on a wooden desk"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYD54etLK5BtC1GOuTSAssq9to6wcYMq28d0MGObkbuZ-pS-Ze58qgfTV26Y5SU2-3t_g8zisFMhCz0rMG49agZwxzoHBr00krLeIWleffRZ-BXqAtYU6Z21AVqpQvOtoj0ae9zLKKnQjVRvKX-lT9CBoICtl0KE254c8b_kn5KBE0Nh2z3ZPD-vLcBRr4fRR3nrD6lG3WKfdf2D4AB-pLn7nf-gpReXeCSia2d_2wnyknFfpWCh8s3bT2-T4ZWJKrf2eM2vjIpw" />
+                    </div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <div class="flex items-center gap-3 text-xs text-text-muted mb-3">
+                            <span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-[14px]">event</span> 28 Februari 2024</span>
+                            <span class="w-1 h-1 rounded-full bg-gray-300"></span>
+                            <span>Ustadz Hanafi</span>
+                        </div>
+                        <h3
+                            class="text-lg font-bold text-text-main mb-3 leading-snug group-hover:text-primary transition-colors">
+                            Pentingnya Menjaga Adab Sebelum Menuntut Ilmu
+                        </h3>
+                        <p class="text-text-muted text-sm line-clamp-3 mb-4 flex-1 leading-relaxed">
+                            Ilmu tanpa adab ibarat pohon tanpa buah. Artikel ini membahas mengapa adab menjadi pondasi
+                            utama bagi seorang penuntut ilmu dalam tradisi pesantren.
+                        </p>
+                        <a class="inline-flex items-center text-primary text-sm font-bold hover:underline decoration-2 underline-offset-4"
+                            href="#">
+                            Baca Selengkapnya
+                        </a>
+                    </div>
+                </article>
+                <article
+                    class="group bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300 flex flex-col overflow-hidden border border-gray-100">
+                    <div class="relative h-48 overflow-hidden">
+                        <div class="absolute top-3 left-3 z-10">
+                            <span
+                                class="px-3 py-1 bg-primary text-white text-xs font-bold rounded shadow-sm">Pengumuman</span>
+                        </div>
+                        <img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                            data-alt="Group of people working together on laptops"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeG1hnSp7VBzFQo9Vi_GAljLU6PkQtoAE-1UruFz9Zbgx4AUdNpwfnKzhHmtMC7GyL_pAEEYJAP_T56-lZmeTqoLs_gPZ0SL0O7GRUsuGSgE0oBgDUUxaCG7bc0nysIQyqJvpiA7AX5u6fZ52Mcck5Mp7Ti41RQQc53ZK7LKPFcK1CQBc5lm66rFjiLdpbFFTGlXv9CO5VHcT03ezHmUvJfb35RLDPDtXol8rjhkbErFCpLAW6ZhevLDkM_kGuSmjoQyxucVlmyQ" />
+                    </div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <div class="flex items-center gap-3 text-xs text-text-muted mb-3">
+                            <span class="flex items-center gap-1"><span
+                                    class="material-symbols-outlined text-[14px]">event</span> 20 Februari 2024</span>
+                            <span class="w-1 h-1 rounded-full bg-gray-300"></span>
+                            <span>Admin IT</span>
+                        </div>
+                        <h3
+                            class="text-lg font-bold text-text-main mb-3 leading-snug group-hover:text-primary transition-colors">
+                            Maintenance Sistem Informasi Akademik Asrama
+                        </h3>
+                        <p class="text-text-muted text-sm line-clamp-3 mb-4 flex-1 leading-relaxed">
+                            Diberitahukan kepada seluruh santri bahwa akan dilakukan pemeliharaan sistem pada hari
+                            Minggu pukul 00.00 - 04.00 WIB. Mohon maaf atas ketidaknyamanan.
+                        </p>
+                        <a class="inline-flex items-center text-primary text-sm font-bold hover:underline decoration-2 underline-offset-4"
+                            href="#">
+                            Baca Selengkapnya
+                        </a>
+                    </div>
+                </article>
+            </div>
+            <div class="flex justify-center items-center gap-2">
+                <button
+                    class="w-10 h-10 flex items-center justify-center rounded-lg bg-white border border-gray-200 text-text-main hover:bg-gray-50 transition-colors disabled:opacity-50"
+                    disabled="">
+                    <span class="material-symbols-outlined text-lg">chevron_left</span>
+                </button>
+                <button
+                    class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-white font-bold shadow-md">1</button>
+                <button
+                    class="w-10 h-10 flex items-center justify-center rounded-lg bg-white border border-gray-200 text-text-main hover:bg-gray-50 hover:text-primary hover:border-primary transition-all font-medium">2</button>
+                <button
+                    class="w-10 h-10 flex items-center justify-center rounded-lg bg-white border border-gray-200 text-text-main hover:bg-gray-50 hover:text-primary hover:border-primary transition-all font-medium">3</button>
+                <span class="w-10 h-10 flex items-center justify-center text-gray-400">...</span>
+                <button
+                    class="w-10 h-10 flex items-center justify-center rounded-lg bg-white border border-gray-200 text-text-main hover:bg-gray-50 hover:text-primary hover:border-primary transition-all font-medium">8</button>
+                <button
+                    class="w-10 h-10 flex items-center justify-center rounded-lg bg-white border border-gray-200 text-text-main hover:bg-gray-50 hover:text-primary hover:border-primary transition-all">
+                    <span class="material-symbols-outlined text-lg">chevron_right</span>
+                </button>
+            </div>
+        </div>
+    </main>
+    <footer id="Kontak" class="bg-background-dark pt-16 pb-8 text-white">
+        <div class="layout-container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Column 1: Brand -->
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="flex size-10 items-center justify-center rounded-lg bg-primary text-background-dark shadow-md">
+                            <span class="material-symbols-outlined">mosque</span>
+                        </div>
+                        <h2 class="text-lg font-bold">Asrama Sunan Gunung Jati</h2>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Wadah pembinaan mahasiswa yang mengintegrasikan nilai-nilai keislaman, keilmuan, dan
+                        keindonesiaan demi terwujudnya generasi emas peradaban.
+                    </p>
+                </div>
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6 text-white border-b border-primary/30 inline-block pb-1">
+                        Tautan Cepat</h3>
+                    <ul class="flex flex-col gap-3 text-sm text-slate-300">
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                href="profil.html"><span class="material-symbols-outlined text-xs">chevron_right</span>
+                                Profil</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                href="penghuni.html"><span
+                                    class="material-symbols-outlined text-xs">chevron_right</span> Penghuni</a></li>
+
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                href="kegiatan.html"><span
+                                    class="material-symbols-outlined text-xs">chevron_right</span> Kegiatan </a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2"
+                                href="berita.html"><span class="material-symbols-outlined text-xs">chevron_right</span>
+                                Berita</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3: Contact Info -->
+                <div class="lg:col-span-2">
+                    <h3 class="text-lg font-bold mb-6 text-white border-b border-primary/30 inline-block pb-1">
+                        Hubungi Kami</h3>
+                    <ul class="flex flex-col gap-4 text-sm text-slate-300">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-primary mt-0.5">location_on</span>
+                            <span>Jl. Bunga No.21 11, RT.11/RW.9, Palmeriam, Kec. Matraman, Kota Jakarta Timur,
+                                Daerah Khusus Ibukota Jakarta 13140</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">call</span>
+                            <span>+6285779917483</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary">mail</span>
+                            <a href="mailto:asramasunangunungjati@gmail.com"
+                                class="hover:text-primary transition-colors">
+                                asramasunangunungjati@gmail.com
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="flex gap-4 mt-6">
+                        <a class="flex size-10 items-center justify-center rounded-full bg-slate-800 text-white hover:bg-primary hover:text-background-dark transition-all"
+                            href="https://www.tiktok.com/@asrama1952" target="_blank">
+                            <svg class="size-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path
+                                    d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.17h0A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14z" />
+                            </svg>
+                        </a>
+
+                        <a class="flex size-10 items-center justify-center rounded-full bg-slate-800 text-white hover:bg-primary hover:text-background-dark transition-all"
+                            href="https://www.instagram.com/asramasunangunungjati_/" target="_blank"
+                            rel="noopener noreferrer">
+                            <svg class="size-5 fill-current" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.072 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+                <p>© 2026 Asrama Sunan Gunung Jati. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
