@@ -33,82 +33,31 @@
             },
         }
     </script>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        .tree-line::before {
-            content: '';
-            position: absolute;
-            top: -24px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 2px;
-            height: 24px;
-            background-color: #ebefed;
-        }
-
-        .tree-parent::after {
-            content: '';
-            position: absolute;
-            bottom: -24px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 2px;
-            height: 24px;
-            background-color: #ebefed;
-        }
-
-        .tree-connector {
-            position: absolute;
-            top: -24px;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background-color: #ebefed;
-        }
-
-        .tree-connector-center {
-            position: absolute;
-            top: -24px;
-            left: 50%;
-            transform: translateX(-50%);
-            height: 24px;
-            width: 2px;
-            background-color: #ebefed;
-        }
-
-        .vertical-connector {
-            width: 2px;
-            background-color: #ebefed;
-            margin: 0 auto;
-            height: 48px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="bg-background-light text-[#121614] font-display antialiased overflow-x-hidden flex flex-col min-h-screen">
     <header class="sticky top-0 z-50 w-full border-b border-[#ebefed] bg-white px-4 md:px-10 py-3 shadow-sm">
         <div class="mx-auto flex max-w-7xl items-center justify-between">
             <div class="flex items-center gap-4 text-primary-dark">
-                <div class="flex items-center justify-center size-12 bg-primary-dark rounded-lg shadow-sm">
-                    <span class="material-symbols-outlined text-white text-3xl">mosque</span>
+                <div class="flex items-center justify-center size-12 overflow-hidden rounded-lg shadow-sm">
+                    <img src="images/logo2.png" alt="Logo Asrama" class="h-full w-full object-cover">
                 </div>
                 <div class="flex flex-col">
                     <h2 class="text-primary-dark text-xl font-bold leading-tight tracking-tight">Asrama Sunan Gunung
                         Jati</h2>
-                    <span class="text-gray-500 text-xs font-medium tracking-wide">Membangun Karakter Islami</span>
+                    <span class="text-gray-500 text-xs font-medium tracking-wide">Membangun Future Leader</span>
                 </div>
             </div>
+            <!-- Desktop Navigation -->
             <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
                 <nav class="flex items-center gap-8">
                     <a class="text-[#677e70] hover:text-primary-dark text-sm font-semibold transition-colors"
                         href="index.html">Home</a>
-                    <a class="text-[#1a472a] text-sm font-bold border-b-2 border-[#d4af37] pb-0.5"
+                    <a class="text-primary-dark text-sm font-bold border-b-2 border-accent-gold pb-0.5"
                         href="Profil.html">Profil</a>
                     <a class="text-[#677e70] hover:text-primary-dark text-sm font-semibold transition-colors"
-                        href="Penghuni.html">Penghuni</a>
+                        href="Penghuni.html">Warga</a>
                     <a class="text-[#677e70] hover:text-primary-dark text-sm font-semibold transition-colors"
                         href="Kegiatan.html">Kegiatan</a>
                     <a class="text-[#677e70] hover:text-primary-dark text-sm font-semibold transition-colors"
@@ -117,9 +66,32 @@
                         href="#Kontak">Kontak</a>
                 </nav>
             </div>
-            <button class="md:hidden p-2 text-primary-dark">
-                <span class="material-symbols-outlined">menu</span>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn"
+                class="flex md:hidden items-center justify-center p-2 text-primary-dark hover:bg-slate-100 rounded-lg transition-colors">
+                <span class="material-symbols-outlined text-3xl">menu</span>
             </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute left-0 top-[73px] w-full bg-white border-b border-[#ebefed] shadow-lg z-40">
+            <nav class="flex flex-col p-4 gap-4">
+                <a class="text-[#677e70] hover:text-primary-dark text-sm font-semibold px-4 py-2 transition-colors hover:bg-slate-50 rounded-lg"
+                    href="index.html">Home</a>
+                <a class="text-primary-dark text-sm font-bold px-4 py-2 bg-slate-50 rounded-lg"
+                    href="Profil.html">Profil</a>
+                <a class="text-[#677e70] hover:text-primary-dark text-sm font-semibold px-4 py-2 transition-colors hover:bg-slate-50 rounded-lg"
+                    href="Penghuni.html">Warga</a>
+                <a class="text-[#677e70] hover:text-primary-dark text-sm font-semibold px-4 py-2 transition-colors hover:bg-slate-50 rounded-lg"
+                    href="Kegiatan.html">Kegiatan</a>
+                <a class="text-[#677e70] hover:text-primary-dark text-sm font-semibold px-4 py-2 transition-colors hover:bg-slate-50 rounded-lg"
+                    href="Berita.html">Berita</a>
+                <a class="text-[#677e70] hover:text-primary-dark text-sm font-semibold px-4 py-2 transition-colors hover:bg-slate-50 rounded-lg"
+                    href="#Kontak">Kontak</a>
+            </nav>
+        </div>
         </div>
     </header>
     <main class="flex-grow w-full">
@@ -144,29 +116,35 @@
                                 Kami</span>
                         </div>
                         <h2 class="text-3xl md:text-4xl font-bold text-primary-dark leading-tight">
-                            Membangun Generasi Emas Sejak 1990
+                            Membangun Generasi Emas Sejak 1952
                         </h2>
                         <div class="space-y-4 text-gray-600 leading-relaxed text-lg">
                             <p>
-                                Berawal dari sebuah inisiatif kecil para ulama dan tokoh masyarakat, Asrama Sunan Gunung
-                                Jati didirikan sebagai jawaban atas kebutuhan hunian yang kondusif bagi mahasiswa
-                                perantauan.
+                                berdirinya Asrama Sunan Gunung Jati (ASGJ) pada tahun 1952 diawali oleh
+                                pemikiran bagaimana agar Mahasiswa Islam dan Pelajar Islam dapat berkumpul untuk belajar
+                                sambil berjuang. Ide brilian tersebut mendapat sambutan dari tokoh-tokoh yang
+                                perduli dengan pergerakan Islam seperti; Prawoto Mangkusasmito, Wakil Perdana Menteri
+                                Kabinet Wilopo-Prawoto, Meester Sindian Djajadiningrat, Kepala Jawatan Pajak Bumi,
+                                keduanya selanjutnya menjadi dua dari delapan orang pendiri Asrama Sunan Gunung Jati
+                                (ASGJ).
                             </p>
                             <p>
-                                Selama lebih dari tiga dekade, kami telah bertransformasi dari sekadar tempat tinggal
-                                menjadi inkubator kepemimpinan. Nama "Sunan Gunung Jati" diambil sebagai penghormatan
-                                kepada salah satu Wali Songo yang menyebarkan Islam dengan pendekatan budaya dan
-                                kebijaksanaan, semangat yang terus kami hidupkan dalam setiap kegiatan asrama.
+                                Asrama Sunan Gunung Jati (ASGJ) mulai melakukan kegiatannya sejak tanggal 4 Mei
+                                tahun 1952 dan didirikan dihadapan Notaris Raden Kadiman di Jakarta pada hari Senin
+                                tanggal 26 Mei tahun 1952. Yayasan dalam melakukan aktivitas kegiatannya berkantor di
+                                Jl. Bunga No.21 11, RT.11/RW.9, Palmeriam, Kec. Matraman, Kota Jakarta Timur.
                             </p>
+                            <p>Saat ini, Asrama Sunan Gunung Jati dikelola secara profesional di bawah naungan Yayasan
+                                Asrama Pelajar Islam (YAPI). Dalam perkembangannya, YAPI juga telah mendirikan tiga
+                                asrama binaan lainnya sebagai bagian dari jaringan asrama mahasiswa, yaitu:</p>
+                            <ul class="list-disc ml-6 text-slate-600 space-y-1">
+                                <li>Asrama Sunan Giri (ASG) yang berlokasi di Jl. Sunan Giri No.1, RT.2/RW.15,
+                                    Rawamangun</li>
+                                <li>Asrama Wali Songo (AWS) di Jl. Kompos No.19, RT.11/RW.8, Lenteng Agung</li>
+                                <li>Asrama Putri (Aspuri) di Jl. Balai Pustaka I No.3, RT.3/RW.10, Rawamangun</li>
+                            </ul>
                         </div>
-                        <div class="pt-4">
-                            <button
-                                class="text-primary font-bold hover:text-accent-gold transition-colors flex items-center gap-2 group">
-                                Baca Sejarah Lengkap
-                                <span
-                                    class="material-symbols-outlined group-hover:translate-x-1 transition-transform text-sm">arrow_forward</span>
-                            </button>
-                        </div>
+
                     </div>
                     <div class="relative order-1 lg:order-2 group">
                         <div
@@ -176,11 +154,10 @@
                             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10"></div>
                             <img alt="Modern dormitory building exterior with students walking"
                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                data-alt="Modern islamic architecture building with students"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFfYHYZoqchHprqYH-ou3Vu71sfsRqvXdo5b5Upgc5RY6BYiUf1o0wwOoknYSCYSsyA_oWpAFO8YITvcoxjKUWnPilJxDJKvqYm4ozzVbYSiZyNyLmbVSLOuQzwNbpJMLKrbjY5HBWFaPukR0FYI7MQEuE3Q9zsJSskZXDNNCallP0l8eMZgrFsrI3498h1N6Sh85P542IoB_yS1pVHKm8Z2O66C7cBVUVuCUghPnXgqsq-ne7Ce38gNGRiq2eaepvKDdjAWegSg" />
+                                data-alt="Modern islamic architecture building with students" src="images/bayt1.jpeg" />
                             <div class="absolute bottom-6 left-6 right-6 z-20 text-white">
-                                <p class="text-sm font-medium text-accent-gold mb-1">Didirikan 1990</p>
-                                <p class="text-lg font-bold">Gedung Perintis</p>
+                                <p class="text-sm font-medium text-accent-gold mb-1">Didirikan 1952</p>
+                                <p class="text-lg font-bold">Gedung Asrama Sunan Gunung Jati</p>
                             </div>
                         </div>
                     </div>
@@ -205,7 +182,7 @@
         <section class="py-20 px-4 md:px-10 bg-white">
             <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-4">Fasilitas Unggulan</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-4">Empat Lokasi Asrama</h2>
                     <p class="text-gray-600 max-w-2xl mx-auto">Menunjang kenyamanan dan produktivitas mahasiswa dengan
                         fasilitas yang lengkap dan terawat.</p>
                 </div>
@@ -213,16 +190,15 @@
                     <div class="group relative overflow-hidden rounded-2xl h-[300px] shadow-lg">
                         <img alt="Gedung Utama Asrama"
                             class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                            data-alt="Modern university campus building exterior"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBhf3Nw0PPS998yVibX3DREXFdyX5fPDlxOoHaI3Cn2JadDmpb0dCpTThuSIezZ6rRKLlnnBSESFB6boHpcBClvceR0IMoHM8-QpoSPFZjumi7p-WjLsoTXMQ78sL1xbm3YKQZFOzjZS_bJ336Y9hNLtItMu6oHVBmamljUYF94nAC4WyOQUQEyxwmK7S8_0-SHJtORrG8DZCArp2MSiKhipk9QVaR_FtDnEisKvv_zYzkRR1cM1WnbCqO7SnoyX_LRLSJtKF45w" />
+                            data-alt="Modern university campus building exterior" src="images/bayt1.jpeg" />
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
                         <div class="absolute bottom-0 left-0 p-6 md:p-8 w-full">
                             <div class="border-l-4 border-accent-gold pl-4">
-                                <h3 class="text-2xl font-bold text-white mb-2">Gedung Utama</h3>
+                                <h3 class="text-2xl font-bold text-white mb-2">Asrama Sunan Gunung Jati</h3>
                                 <p class="text-white/90 text-sm flex items-start gap-2">
                                     <span
                                         class="material-symbols-outlined text-accent-gold text-lg mt-0.5">location_on</span>
-                                    Jl. Cipadung No. 105, Lantai 1-3
+                                    Jl. Bunga No.21 11, RT.11/RW.9, Palmeriam,
                                 </p>
                             </div>
                         </div>
@@ -230,16 +206,16 @@
                     <div class="group relative overflow-hidden rounded-2xl h-[300px] shadow-lg">
                         <img alt="Ruang Belajar Perpustakaan"
                             class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                            data-alt="Quiet modern library study area with books"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmhn5uQ330FlQbeHJ-Qmpnan6loP2BAkD45N2SDn7z6C5-CDoepZJMWKE2Wrpu3bW8Sgb-ssVUPzi-mNJ9FjhWkFcqKHl_QLN3BR5PzekzwYmf1yJLAFIneqxZ0JWTu7Vdml4HU675Tey3bkALLokiuG1adDkkgMAe2sQhzldMSDRydz6pSj2lUl82B-s0oL_po6niT4sIrD9fYa2VDvOyIjbAUEiUXg2VETITU7BZfwtjiN5g5jnnBYVvAJUELtdXRDX-GMWsYw" />
+                            data-alt="Quiet modern library study area with books" src="" />
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
                         <div class="absolute bottom-0 left-0 p-6 md:p-8 w-full">
                             <div class="border-l-4 border-accent-gold pl-4">
-                                <h3 class="text-2xl font-bold text-white mb-2">Ruang Belajar</h3>
+                                <h3 class="text-2xl font-bold text-white mb-2">Asrama Sunan Giri</h3>
                                 <p class="text-white/90 text-sm flex items-start gap-2">
                                     <span
                                         class="material-symbols-outlined text-accent-gold text-lg mt-0.5">location_on</span>
-                                    Gedung Perpustakaan, Lantai 2
+                                    Jl. Sunan Giri No.1, RT.2/RW.15,
+                                    Rawamangun
                                 </p>
                             </div>
                         </div>
@@ -247,16 +223,15 @@
                     <div class="group relative overflow-hidden rounded-2xl h-[300px] shadow-lg">
                         <img alt="Kamar Tidur Asrama"
                             class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                            data-alt="Cozy minimalist bedroom interior with natural light"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuApnAUHrRsl8N_SVkquC4uw_1rM1wJ6ksDau8YBVkEo3e9cFMSWPcLwT992r6XQABjc_S5ZtX_iQ1CqA6GZJMUnlMHraXxp82a-UghoL69kDUVPaxxMXuC67vQWvFrNHvNPMD9M6KI6Sg1vav_g04Le0E4C7scIM5xNRDUOq8d_2cpiYPXu9Yig1_aSsMNINtDZcSRsLYQERnXRceBKC3wgK-BMyMJjQ1ordrDDTg61fx7SZ-1sZk97xAErd3QrU6YLu_k3cZKZKg" />
+                            data-alt="Cozy minimalist bedroom interior with natural light" src="" />
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
                         <div class="absolute bottom-0 left-0 p-6 md:p-8 w-full">
                             <div class="border-l-4 border-accent-gold pl-4">
-                                <h3 class="text-2xl font-bold text-white mb-2">Kamar Hunian</h3>
+                                <h3 class="text-2xl font-bold text-white mb-2">Asrama Wali Songo</h3>
                                 <p class="text-white/90 text-sm flex items-start gap-2">
                                     <span
                                         class="material-symbols-outlined text-accent-gold text-lg mt-0.5">location_on</span>
-                                    Gedung Asrama Putra &amp; Putri
+                                    Jl. Kompos No.19, RT.11/RW.8, Lenteng Agung
                                 </p>
                             </div>
                         </div>
@@ -264,16 +239,15 @@
                     <div class="group relative overflow-hidden rounded-2xl h-[300px] shadow-lg">
                         <img alt="Masjid Asrama"
                             class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                            data-alt="Peaceful mosque interior with carpet and warm lighting"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwIfYOMghZJtSQZJ5hZhdONApOf0NjhGb89d5xOeBVWzjncG0AxYzayLPPG-PpTGBSYltu6DnrGnirHIOaW4-_oEy1Wr8zKGhk-B011fDkxL1j1w01JA_8RHxWWAzRjJrGzA_ZbqXMelZMK2gBiGtkfjl5oiLjSgbZmRM9P3CvWdk3QQpaGNuTxGK8Ux5bNKTG-HEynYA8BWIpBuLJdTRAgnuDNuQf_fM2rBD5dNfEgIaj7iVJp_byLVHfy0kcIQQnvGVx18qLCw" />
+                            data-alt="Peaceful mosque interior with carpet and warm lighting" src="" />
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
                         <div class="absolute bottom-0 left-0 p-6 md:p-8 w-full">
                             <div class="border-l-4 border-accent-gold pl-4">
-                                <h3 class="text-2xl font-bold text-white mb-2">Masjid Al-Ilmu</h3>
+                                <h3 class="text-2xl font-bold text-white mb-2">Asrama Putri</h3>
                                 <p class="text-white/90 text-sm flex items-start gap-2">
                                     <span
                                         class="material-symbols-outlined text-accent-gold text-lg mt-0.5">location_on</span>
-                                    Kompleks Utama Asrama
+                                    Jl. Balai Pustaka I No.3, RT.3/RW.10, Rawamangun
                                 </p>
                             </div>
                         </div>
@@ -284,8 +258,9 @@
         <section class="bg-[#f2f4f3] py-20 px-4 md:px-10 overflow-hidden">
             <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-4">Struktur Organisasi</h2>
-                    <p class="text-gray-600">Dewan Pengurus Periode 2023-2024</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-4">Struktur Organisasi Asrama Sunan
+                        Gunung Jati</h2>
+                    <p class="text-gray-600">Pengurus Periode 2026-2027</p>
                 </div>
                 <div class="flex flex-col items-center w-full overflow-x-auto pb-8">
                     <div class="min-w-[800px] flex flex-col items-center">
@@ -295,10 +270,9 @@
                                 <div
                                     class="w-20 h-20 mx-auto rounded-full overflow-hidden bg-gray-200 mb-4 border-2 border-accent-gold p-1">
                                     <img alt="Ketua Asrama" class="w-full h-full rounded-full object-cover"
-                                        data-alt="Portrait of a young man smiling"
-                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh7BcsiaKmrJAg3jUPMScC4LfjcfQBA99EdhwTBSNdugx23RUHBQOfnau80XHCE_HOSDoe_9Fg6N5x9r_JXUVyXGgl4IwjajNZC1ThzCpLf1XT66RnerQO1fVAtzURPZMgwahk3RP_V2gKvDys6rVUYk_JjHgRNddtf2oGmWe8FmWqCmPM9KEvg3oRRDlsJvLFDDZ3fe5p4VGcqTuygR6XWEEuoWvUE7et9cq995-AWWITBgmBOgWH_-bvXwk2l4vHLEK4zJEmJQ" />
+                                        data-alt="Portrait of a young man smiling" src="images/willy.jpeg" />
                                 </div>
-                                <h3 class="font-bold text-lg text-primary-dark">Ahmad Fauzi</h3>
+                                <h3 class="font-bold text-lg text-primary-dark">Willy Apriyanto</h3>
                                 <p class="text-sm text-accent-gold font-medium uppercase tracking-wide">Ketua Asrama</p>
                             </div>
                         </div>
@@ -317,9 +291,9 @@
                                     <div class="w-14 h-14 mx-auto rounded-full overflow-hidden bg-gray-200 mb-3">
                                         <img alt="Sekretaris 1" class="w-full h-full object-cover"
                                             data-alt="Portrait of a young woman professional"
-                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiT0MU-VvWkSduLxIy17KGpIdu9GlR9ox7DhBkMAEOe6bnjuqBBZR4-ME0svzHZnQ_f1EBBZLHHdWB3As68Oikb-sELO956GD7S_7MrkqC0lzo6am-Exn8PyZe3__0YRVp3yzmep9SUMUXBG2DReqqTpcs7hnAJk0FAQRhuWgebRka2U6kRx10nahBrHdbmdj2z469FTtwnqGvNnpKnjlMZIr4jjIeGh0oh07Iv5B8pQah0mkE-YnhBplJy8Bx2TzMg-43ynnetQ" />
+                                            src="images/kholid.jpeg" />
                                     </div>
-                                    <h4 class="font-bold text-gray-900 text-sm">Siti Aminah</h4>
+                                    <h4 class="font-bold text-gray-900 text-sm">Kholid Syaifullah</h4>
                                     <p class="text-xs text-gray-500">Sekretaris 1</p>
                                 </div>
                             </div>
@@ -328,10 +302,9 @@
                                     class="bg-white p-5 rounded-xl shadow-md border-t-2 border-primary/50 w-44 text-center hover:shadow-lg transition-shadow">
                                     <div class="w-14 h-14 mx-auto rounded-full overflow-hidden bg-gray-200 mb-3">
                                         <img alt="Sekretaris 2" class="w-full h-full object-cover"
-                                            data-alt="Portrait of a woman smiling"
-                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdE7SzELR-9Q0sxN5HarzN1UDeNJ7PbGgcN6XHUN3ifmXffxJcylBW3KicdAWDrmSHexBDqwe3yDX2zMZGvPgdri0YTuIlnsV5ycxR5uvZaPph-L-M6lkGVgbYBuLnpKEnqpLUtSKCeiIXYM1RjUlnUdubTXHdHykWcqXiibzIh3E7FY609WTSW_PSPiuw5GI3vkLUZXN5GVll6eCnoEEalR6y0QYQnk3hiuKRrAuKGNqyiuq2VZblWTi-yPfs8vmkAbwsiVkFgw" />
+                                            data-alt="Portrait of a woman smiling" src="images/fathan.jpeg" />
                                     </div>
-                                    <h4 class="font-bold text-gray-900 text-sm">Dewi Sartika</h4>
+                                    <h4 class="font-bold text-gray-900 text-sm">Fathan</h4>
                                     <p class="text-xs text-gray-500">Sekretaris 2</p>
                                 </div>
                             </div>
@@ -340,10 +313,9 @@
                                     class="bg-white p-5 rounded-xl shadow-md border-t-2 border-primary/50 w-44 text-center hover:shadow-lg transition-shadow">
                                     <div class="w-14 h-14 mx-auto rounded-full overflow-hidden bg-gray-200 mb-3">
                                         <img alt="Bendahara" class="w-full h-full object-cover"
-                                            data-alt="Portrait of a man with glasses"
-                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOuxR9qmbEdW-wzvpUXjuxyy4xvztzuV6UeYd3fblUw1A-ZFAced_15ysq902j_vLmj6n4sVPwqt26M2C2e473JLtLX5pdAERMgXzl1KxCk6rAPwREIC2ydeAg2qlhGjirGxFxZiQbiyNfruUJ_gFYXJ_HeQOuMWbf4ql2IkVSzBWI-9107lacARQyHNd-_fw1P6_CK3VY2588A1TEPaYwJOgGJystY_rEmfhhRavPuMbQGXEZHtmlM6BVfNVxTPDSx1ZTmfYCAA" />
+                                            data-alt="Portrait of a man with glasses" src="images/yusuf.jpeg" />
                                     </div>
-                                    <h4 class="font-bold text-gray-900 text-sm">Rudi Hartono</h4>
+                                    <h4 class="font-bold text-gray-900 text-sm">Yusuf</h4>
                                     <p class="text-xs text-gray-500">Bendahara</p>
                                 </div>
                             </div>
@@ -360,10 +332,9 @@
                                     class="bg-white p-5 rounded-xl shadow-md border-t-2 border-primary/50 w-56 text-center hover:shadow-lg transition-shadow">
                                     <div class="w-14 h-14 mx-auto rounded-full overflow-hidden bg-gray-200 mb-3">
                                         <img alt="Divisi Internal" class="w-full h-full object-cover"
-                                            data-alt="Portrait of a serious man"
-                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYcq8dfd-NDk5Z7IMm7gfsqvzrVthlIlzlmf7NiQFflSm25lYzki9GLwk_C48iC1cHBg6ysNGY1526NsEw86OcO3AlDgv4U75lNR2KpSWta6KKgwKJOFZfB6CunlPIooY1RU6vp4ezJeHj9c9uXhCgwsa8PpnfOcayKJBQ9k-iaxC3teYp4qTMXQYNHY9tMlD72FLA_x4L_nm6JM_fwAgoQQflAi8yp5hFUbkfBoPxE2IHs4OL0V0uCBWe35KqxBUXDsAMMfzyKA" />
+                                            data-alt="Portrait of a serious man" src="images/daffa.jpeg" />
                                     </div>
-                                    <h4 class="font-bold text-gray-900">Budi Santoso</h4>
+                                    <h4 class="font-bold text-gray-900">Daffa</h4>
                                     <p class="text-xs text-gray-500">Divisi Internal</p>
                                 </div>
                             </div>
@@ -372,10 +343,9 @@
                                     class="bg-white p-5 rounded-xl shadow-md border-t-2 border-primary/50 w-56 text-center hover:shadow-lg transition-shadow">
                                     <div class="w-14 h-14 mx-auto rounded-full overflow-hidden bg-gray-200 mb-3">
                                         <img alt="Divisi Eksternal" class="w-full h-full object-cover"
-                                            data-alt="Portrait of a young man in suit"
-                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiT0MU-VvWkSduLxIy17KGpIdu9GlR9ox7DhBkMAEOe6bnjuqBBZR4-ME0svzHZnQ_f1EBBZLHHdWB3As68Oikb-sELO956GD7S_7MrkqC0lzo6am-Exn8PyZe3__0YRVp3yzmep9SUMUXBG2DReqqTpcs7hnAJk0FAQRhuWgebRka2U6kRx10nahBrHdbmdj2z469FTtwnqGvNnpKnjlMZIr4jjIeGh0oh07Iv5B8pQah0mkE-YnhBplJy8Bx2TzMg-43ynnetQ" />
+                                            data-alt="Portrait of a young man in suit" src="images/ihsan.jpeg" />
                                     </div>
-                                    <h4 class="font-bold text-gray-900">Fajar Siddiq</h4>
+                                    <h4 class="font-bold text-gray-900">Ihsan</h4>
                                     <p class="text-xs text-gray-500">Divisi Eksternal</p>
                                 </div>
                             </div>
@@ -391,9 +361,8 @@
                 <!-- Column 1: Brand -->
                 <div class="flex flex-col gap-4">
                     <div class="flex items-center gap-3">
-                        <div
-                            class="flex size-10 items-center justify-center rounded-lg bg-primary text-background-dark shadow-md">
-                            <span class="material-symbols-outlined">mosque</span>
+                        <div class="flex items-center justify-center size-12 overflow-hidden rounded-lg shadow-sm">
+                            <img src="images/logo2.png" alt="Logo Asrama" class="h-full w-full object-cover">
                         </div>
                         <h2 class="text-lg font-bold">Asrama Sunan Gunung Jati</h2>
                     </div>
@@ -473,6 +442,7 @@
             </div>
         </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
