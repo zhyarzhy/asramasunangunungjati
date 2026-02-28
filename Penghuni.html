@@ -53,36 +53,25 @@
             },
         }
     </script>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        .scrollbar-hide::-webkit-scrollbar {
-            display: none;
-        }
-
-        .scrollbar-hide {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="bg-background-light dark:bg-background-dark font-display text-[#101814] antialiased">
-    <div class="flex flex-col min-h-screen">
+    <div class="relative flex w-full flex-col overflow-x-hidden">
         <header class="sticky top-0 z-50 w-full border-b border-[#ebefed] bg-white px-4 md:px-10 py-3 shadow-sm">
             <div class="mx-auto flex max-w-7xl items-center justify-between">
+
                 <div class="flex items-center gap-4 text-primary-dark">
-                    <div class="flex items-center justify-center size-12 bg-[#1a472a] rounded-lg shadow-sm">
-                        <span class="material-symbols-outlined text-white text-3xl">mosque</span>
+                    <div class="flex items-center justify-center size-12 overflow-hidden rounded-lg shadow-sm">
+                        <img src="images/logo2.png" alt="Logo Asrama" class="h-full w-full object-cover">
                     </div>
                     <div class="flex flex-col">
                         <h2 class="text-[#1a472a] text-xl font-bold leading-tight tracking-tight">Asrama Sunan Gunung
                             Jati</h2>
-                        <span class="text-gray-500 text-xs font-medium tracking-wide">Membangun Karakter Islami</span>
+                        <span class="text-gray-500 text-xs font-medium tracking-wide">Membangun Future Leader</span>
                     </div>
                 </div>
+
                 <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
                     <nav class="flex items-center gap-8">
                         <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold transition-colors"
@@ -90,7 +79,7 @@
                         <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold transition-colors"
                             href="Profil.html">Profil</a>
                         <a class="text-[#1a472a] text-sm font-bold border-b-2 border-[#d4af37] pb-0.5"
-                            href="Penghuni.html">Penghuni</a>
+                            href="Penghuni.html">Warga</a>
                         <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold transition-colors"
                             href="Kegiatan.html">Kegiatan</a>
                         <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold transition-colors"
@@ -99,6 +88,28 @@
                             href="#Kontak">Kontak</a>
                     </nav>
                 </div>
+
+                <button id="mobile-menu-btn"
+                    class="flex md:hidden items-center justify-center p-2 text-[#1a472a] hover:bg-slate-100 rounded-lg transition-colors">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+            <div id="mobile-menu"
+                class="hidden md:hidden absolute left-0 top-[73px] w-full bg-white border-b border-[#ebefed] shadow-lg animate-fade-in-down z-40">
+                <nav class="flex flex-col p-4 gap-4">
+                    <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold px-4 py-2 transition-colors hover:bg-slate-50 rounded-lg"
+                        href="index.html">Home</a>
+                    <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold px-4 py-2 transition-colors hover:bg-slate-50 rounded-lg"
+                        href="Profil.html">Profil</a>
+                    <a class="text-[#1a472a] text-sm font-bold px-4 py-2 bg-slate-50 rounded-lg"
+                        href="Penghuni.html">Warga</a>
+                    <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold px-4 py-2 transition-colors hover:bg-slate-50 rounded-lg"
+                        href="Kegiatan.html">Kegiatan</a>
+                    <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold px-4 py-2 transition-colors hover:bg-slate-50 rounded-lg"
+                        href="Berita.html">Berita</a>
+                    <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold px-4 py-2 transition-colors hover:bg-slate-50 rounded-lg"
+                        href="#Kontak">Kontak</a>
+                </nav>
             </div>
         </header>
         <section class="relative bg-primary py-16 px-6 lg:px-40 overflow-hidden">
@@ -147,11 +158,10 @@
                             <img alt="Portrait of Ahmad Fulan, Senior Resident" class="w-full h-full object-cover"
                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvsTJI89zZd7_XaIOdiYQQ7aonQ8ZByM7SN3onnwpJb7CjWC8HJt1EkaUd3-iYvesm7c_RL1XDxWvvBsc_THWZpXBbBtvb9TM2tC69HniVZdpBh8UNVHncvS7IQCLenX-svw_gKMlRLSH7dLYGTQ6rjHV9pcDnGwbT5fod2jhQxzcrVEKITJeUMH5k_5qeOUsie1MpjrFgg0QummIltBEFfJ0e3-QneI3XFDBazpQpCsM1-x1byyrF_X2J5zQZM93Vgjadv2M5cQ" />
                         </div>
-                        <h3 class="text-[#101814] text-lg font-bold text-center">Ahmad Fulan</h3>
-                        <p class="text-primary text-sm font-semibold text-center mt-1">Ketua Asrama</p>
+                        <h3 class="text-[#101814] text-lg font-bold text-center">Ilham Pajar Berutu</h3>
                         <div class="mt-3 text-center">
-                            <p class="text-gray-500 text-xs uppercase tracking-wide font-medium">Teknik Sipil</p>
-                            <p class="text-gray-400 text-xs">Universitas Indonesia</p>
+                            <p class="text-gray-500 text-xs uppercase tracking-wide font-medium">Perbankan Syariah</p>
+                            <p class="text-gray-400 text-xs">STEBank</p>
                         </div>
                     </div>
                     <div
@@ -164,11 +174,10 @@
                             <img alt="Portrait of Budi Santoso, Senior Resident" class="w-full h-full object-cover"
                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6NIqekVw8lawx0o7CEPUgdgVEWIIeQ2hVotVSfPENkfibGHfL0CYIdXSuOzuGKmyOZpHiqDPoJaYNIdW4Q20pAHP-6GmGcHFiUB93u6GE78lD9aiBIsqfHp7aib5nRkfuLWM9MzD6R61nSkT5ZOD4XJotOWqstwZujuTSJH8teF7-H0kzVcsmb4MhGIbw-CrjBWV15qOe2teWyFxp0-w04rhzd_CtBa7p5BQPK_5f5XQFcvQp-EOqSEErrhr-H1EL4Aflmxyr9A" />
                         </div>
-                        <h3 class="text-[#101814] text-lg font-bold text-center">Budi Santoso</h3>
-                        <p class="text-primary text-sm font-semibold text-center mt-1">Dewan Penasehat</p>
+                        <h3 class="text-[#101814] text-lg font-bold text-center">Alif Iswadi</h3>
                         <div class="mt-3 text-center">
                             <p class="text-gray-500 text-xs uppercase tracking-wide font-medium">Hukum</p>
-                            <p class="text-gray-400 text-xs">Universitas Indonesia</p>
+                            <p class="text-gray-400 text-xs">Universitas Al-Azhar Indonesia</p>
                         </div>
                     </div>
                 </div>
@@ -183,73 +192,69 @@
                         class="flex flex-col items-center bg-white rounded-xl p-4 border border-silver hover:border-primary/50 shadow-sm hover:shadow-md transition-all">
                         <div
                             class="w-20 h-20 rounded-full overflow-hidden border border-silver mb-3 relative bg-gray-100">
-                            <img alt="Resident Portrait" class="w-full h-full object-cover"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt4xCw83a5lYiqwH33pB4SaYN_h7vNc2vvF7-Ukovp_t5A8s7RatSK1IisCJujFxovkfjRxhs4bXRq6tZ84uEgFh8_8R1pbqU6gqJviMla9zAWtBAO9IKhyeArOepBnqRcuGl9tsYKy6B72tS0Ex0W7aI_TiPCiOTDU675u4eU5M-fdKx2FEkCuivl99r0IEoAav5iDQRfPvbv6XAXRt3rUPI04xWw6YhfrlUkScpKkfza0UQzfznjnMLG0udU2zqGLwWwkhCz0w" />
+                            <img alt="Resident Portrait" class="w-full h-full object-cover" src="images/willy.jpeg" />
                         </div>
-                        <h3 class="text-[#101814] text-sm font-bold text-center line-clamp-1">Fajar Siddiq</h3>
-                        <p class="text-gray-500 text-[11px] uppercase tracking-wide font-medium text-center mt-2">Ilmu
-                            Komputer</p>
-                        <p class="text-gray-400 text-[10px] text-center">Univ. Al-Azhar</p>
+                        <h3 class="text-[#101814] text-sm font-bold text-center line-clamp-1">Willy Apriyanto</h3>
+                        <p class="text-gray-500 text-[11px] uppercase tracking-wide font-medium text-center mt-2">Teknik
+                            Mesin</p>
+                        <p class="text-gray-400 text-[10px] text-center">Universitas Gunadarma</p>
                     </div>
                     <div
                         class="flex flex-col items-center bg-white rounded-xl p-4 border border-silver hover:border-primary/50 shadow-sm hover:shadow-md transition-all">
                         <div
                             class="w-20 h-20 rounded-full overflow-hidden border border-silver mb-3 relative bg-gray-100">
-                            <img alt="Resident Portrait" class="w-full h-full object-cover"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxI4iZl815c-gtgJKe0Mn-pYB2vbdgeGkhOl_7ZEhZepcxaeTP9fOuM00xoB_sYfyrRopQeoJNGUd1rEcrUmiEpFQg4qR4rj3xrCb4-YpWOPnEf_xQrOUkLxwtHn25hnDZhk4PA3xFqqNnJQSYfSX1FtYsU6u1qXK8oaHzkwKXsNqmFr8_Twe4S5cQeoxIaNVXkNEBKqbJjjPLSo8u1R8XtBGLPW3olrBTJWieYL0I614lTPp9nI220xes2E2Oo96LoJjg0zxPSQ" />
+                            <img alt="Resident Portrait" class="w-full h-full object-cover" src="images/kholid.jpeg" />
                         </div>
-                        <h3 class="text-[#101814] text-sm font-bold text-center line-clamp-1">Rizky Ramadhan</h3>
+                        <h3 class="text-[#101814] text-sm font-bold text-center line-clamp-1">Kholid Syaifullah</h3>
                         <p class="text-gray-500 text-[11px] uppercase tracking-wide font-medium text-center mt-2">
-                            Kedokteran</p>
-                        <p class="text-gray-400 text-[10px] text-center">UIN Syarif Hidayatullah</p>
+                            Olahraga</p>
+                        <p class="text-gray-400 text-[10px] text-center">Universitas Negeri Jakarta</p>
                     </div>
                     <div
                         class="flex flex-col items-center bg-white rounded-xl p-4 border border-silver hover:border-primary/50 shadow-sm hover:shadow-md transition-all">
                         <div
                             class="w-20 h-20 rounded-full overflow-hidden border border-silver mb-3 relative bg-gray-100">
-                            <img alt="Resident Portrait" class="w-full h-full object-cover"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW-vH-E4S3KZUHr9iOkwgqFyi539EzD95BY1_sUGVTxBA2kmP1er0fE9GeosBunAWq8szn51u5U5IShQnXXIlsLmOOIowZ09HD4VTP7_3c8kEgj0_g_Au-0lSZHfQmZ0ckZiMLqO15U5XhlUihsjgDd9huy_j7wz3XiwVhF6b4vtHCQovWF8YbjX0uBu_nd8wbGJ_QnFwigyoNq53bxALLfx3mjqHIWo_7K1bwM2zhcFHrrzacdCEXL5mWTfW5qeGnbpoC11lYJw" />
+                            <img alt="Resident Portrait" class="w-full h-full object-cover" src="images/yusup2.jpg" />
                         </div>
-                        <h3 class="text-[#101814] text-sm font-bold text-center line-clamp-1">Dimas Anggara</h3>
+                        <h3 class="text-[#101814] text-sm font-bold text-center line-clamp-1">Muhammad Yusup</h3>
                         <p class="text-gray-500 text-[11px] uppercase tracking-wide font-medium text-center mt-2">
-                            Ekonomi</p>
-                        <p class="text-gray-400 text-[10px] text-center">Univ. Pancasila</p>
+                            Agroteknologi</p>
+                        <p class="text-gray-400 text-[10px] text-center">Universtas Ibnu Chaldun Jakarta</p>
                     </div>
                     <div
                         class="flex flex-col items-center bg-white rounded-xl p-4 border border-silver hover:border-primary/50 shadow-sm hover:shadow-md transition-all">
                         <div
                             class="w-20 h-20 rounded-full overflow-hidden border border-silver mb-3 relative bg-gray-100">
-                            <img alt="Resident Portrait" class="w-full h-full object-cover"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkS8GiBSROkgIE9--LMdglm2mzC_HoBEUBGt06tqgC_O-qz7cFBljz4hf0duhErFWtteD_kZSfvk7N6-OT74djzx0Tk3fhqsbWBUUq1UeD0jg2xfAf27uEu5WCiGS7qQMM-wp28E0i-PyMPisIGgJCsILLqk-pOQzLgnwyuT6qJ8nRRXI05MEo7BQ-cwLr7j50NA99BPdXJscxABAp2QA6z1G536L8zKsBCC-h2he4py-9x-JdoqqyWYcbkQC52Wogy9vr09GMlQ" />
+                            <img alt="Resident Portrait" class="w-full h-full object-cover" src="images/fathan2.jpg" />
                         </div>
-                        <h3 class="text-[#101814] text-sm font-bold text-center line-clamp-1">Kevin Sanjaya</h3>
+                        <h3 class="text-[#101814] text-sm font-bold text-center line-clamp-1">Fathan Muslimin Al Haq
+                        </h3>
                         <p class="text-gray-500 text-[11px] uppercase tracking-wide font-medium text-center mt-2">
-                            Arsitektur</p>
-                        <p class="text-gray-400 text-[10px] text-center">Univ. Gunadarma</p>
+                            Jurnalistik</p>
+                        <p class="text-gray-400 text-[10px] text-center">Universitas Esa Unggul</p>
                     </div>
                     <div
                         class="flex flex-col items-center bg-white rounded-xl p-4 border border-silver hover:border-primary/50 shadow-sm hover:shadow-md transition-all">
                         <div
                             class="w-20 h-20 rounded-full overflow-hidden border border-silver mb-3 relative bg-gray-100">
-                            <img alt="Resident Portrait" class="w-full h-full object-cover"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDouH8_FRz7b4U97-2ZPqTNGaFgk9Xk-i_D0RzMJaoInn8z0y8LJc9Zh6vbViHMZDjJypFb3B9euAQF5MCUp12QnWFP2rivmFbcMPP8lnRo5RLx8axsbVQ3h8sGseLtbHzZCYoTehRGcUNZwtCTjXxmG2H6C7N2fga0JEeEU3TOT7dJiOwBRX5Jzf2GdWQzcCDKFfOjp9dkYmw4IQXl6qC336eG55nBLpgC-4_qB52gaX-ACma1LO70TWBvgi2LWydrFLgiuc9txw" />
+                            <img alt="Resident Portrait" class="w-full h-full object-cover" src="images/daffa.jpeg" />
                         </div>
-                        <h3 class="text-[#101814] text-sm font-bold text-center line-clamp-1">M. Ilham</h3>
-                        <p class="text-gray-500 text-[11px] uppercase tracking-wide font-medium text-center mt-2">Sastra
-                            Arab</p>
-                        <p class="text-gray-400 text-[10px] text-center">UIN Syarif Hidayatullah</p>
-                    </div>
-                    <div
-                        class="flex flex-col items-center bg-white rounded-xl p-4 border border-silver hover:border-primary/50 shadow-sm hover:shadow-md transition-all">
-                        <div
-                            class="w-20 h-20 rounded-full overflow-hidden border border-silver mb-3 relative bg-gray-100">
-                            <img alt="Resident Portrait" class="w-full h-full object-cover"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDSQ6X6ChIIwe-OqC6-6kqyhXW9QI1wUh4vrJ2lWVWgrsvjn0dvdJiuj1VhFF3WVKGMX_16LhLRrbhDyCJSIPqEbMZQhluxdL9k38vpJVQYUyJLa9guCbheKQ55LPYj83XcibzfNnYbuuSqmwfJXkfl1cCkBTZ4G6j_Zo3UJYbPPm071rkX3JEh89t-oWkEkAV7miSUi98qTvMTfWVb-8n6P7h3WWkiguL_rPMi8gjGIw0keDLbvdyaomWnBdKEZNvHW1AEiwugg" />
-                        </div>
-                        <h3 class="text-[#101814] text-sm font-bold text-center line-clamp-1">Agus Salim</h3>
+                        <h3 class="text-[#101814] text-sm font-bold text-center line-clamp-1">Muhammad Daffa Hilal Akbar
+                        </h3>
                         <p class="text-gray-500 text-[11px] uppercase tracking-wide font-medium text-center mt-2">
-                            Psikologi</p>
-                        <p class="text-gray-400 text-[10px] text-center">Universitas Indonesia</p>
+                            Agroteknologi</p>
+                        <p class="text-gray-400 text-[10px] text-center">Universitas Ibnu Chaldun Jakarta</p>
+                    </div>
+                    <div
+                        class="flex flex-col items-center bg-white rounded-xl p-4 border border-silver hover:border-primary/50 shadow-sm hover:shadow-md transition-all">
+                        <div
+                            class="w-20 h-20 rounded-full overflow-hidden border border-silver mb-3 relative bg-gray-100">
+                            <img alt="Resident Portrait" class="w-full h-full object-cover" src="images/ihsan.jpeg" />
+                        </div>
+                        <h3 class="text-[#101814] text-sm font-bold text-center line-clamp-1">Ihsan Nur Fallah</h3>
+                        <p class="text-gray-500 text-[11px] uppercase tracking-wide font-medium text-center mt-2">
+                            Agroteknologi</p>
+                        <p class="text-gray-400 text-[10px] text-center">Universitas Ibnu Chaldun Jakarta</p>
                     </div>
                 </div>
             </div>
@@ -264,31 +269,33 @@
                             class="flex flex-col items-center bg-white rounded-lg p-3 border border-bronze/50 hover:bg-gray-50 transition-colors">
                             <div
                                 class="w-14 h-14 rounded-full overflow-hidden border border-bronze/30 mb-2 relative bg-gray-100">
-                                <img alt="Resident Portrait" class="w-full h-full object-cover"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5yj2Y2aZ5WXfgYuD_ILuhFOfOilV-F98kWNMhKcB_x5s89mC6yL4JZ5WRbtG2wpqXN32VchZCLB2O_R0KTfrImar3nVwVtRwfJPsKPOQNH-jSMi7J64BnOKClOeDL1V7s07EwYUE99ncsAMPxawB59rNR0NCXoJn5tB2NI5nVndPX3zGUzvkj-Bjy6R2O4MQmS1DsnC0UW0QV-qAXuB-tHTEH1RNmez1ZovonB61UrXTbGzDveiXgj6YpZN9gaOOG7WTA1rpjEA" />
+                                <img alt="Resident Portrait" class="w-full h-full object-cover" src="images/ali.jpg" />
                             </div>
-                            <h3 class="text-[#101814] text-xs font-bold text-center">Zaki A.</h3>
-                            <p class="text-gray-500 text-[10px] text-center mt-1">Farmasi</p>
+                            <h3 class="text-[#101814] text-xs font-bold text-center">Atqia Ali</h3>
+                            <p class="text-gray-500 text-[10px] text-center mt-1">Bisnis Digital</p>
+                            <p class="text-gray-400 text-[10px] text-center">Jakarta Business School</p>
                         </div>
                         <div
                             class="flex flex-col items-center bg-white rounded-lg p-3 border border-bronze/50 hover:bg-gray-50 transition-colors">
                             <div
                                 class="w-14 h-14 rounded-full overflow-hidden border border-bronze/30 mb-2 relative bg-gray-100">
                                 <img alt="Resident Portrait" class="w-full h-full object-cover"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYzAcKB3s2hRcvj2SKw7zXeFEUtn40DP5dUZufmHQs-Ipoo77QlfHB10kd_3RgWPZQA4Qf1pcBdUtvsGD_yiG3C5RVC5553g0f0gwuJUfTTAFL3jRFdR5lN9vd3CoVqE3aktBt00Y71wcP0E_AcdHNPzr3XLH1uRqZzTLi2M0XTxGw4LJ36q8T8RzPzoHareI9uPvTRZIOyE1gVVSyovpSd3dudiZpzT6DtO89TD8J69HuarME31fLWL6g3XNfWn8QqZ3Wo-UyCQ" />
+                                    src="images/kahfi.PNG" />
                             </div>
-                            <h3 class="text-[#101814] text-xs font-bold text-center">Doni H.</h3>
-                            <p class="text-gray-500 text-[10px] text-center mt-1">Teknik Mesin</p>
+                            <h3 class="text-[#101814] text-xs font-bold text-center">Kahfi Fauzi</h3>
+                            <p class="text-gray-500 text-[10px] text-center mt-1">International Trade</p>
+                            <p class="text-gray-400 text-[10px] text-center">Jakarta Business School</p>
                         </div>
                         <div
                             class="flex flex-col items-center bg-white rounded-lg p-3 border border-bronze/50 hover:bg-gray-50 transition-colors">
                             <div
                                 class="w-14 h-14 rounded-full overflow-hidden border border-bronze/30 mb-2 relative bg-gray-100">
                                 <img alt="Resident Portrait" class="w-full h-full object-cover"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2IpKk_f_kiO9tuKGwWU8xPyKvdafLMl8XoKW-jgIjLAz19SgoQBJKtsO41DLAMN_EJU_hKm3iFxWPKHPKJGShmIEy3dyxF0QEZ0RQ5K6mVTQmTpY4Eqp7Vtsd2alAP9xZX76PS9vsTc97tmO7Ndv1daxRrAdtDEkDewWvEmrVUj5C6l10zlSV5pC5xvZxmcs7G1shvhulLZDur6xvx1YcO9iRHNKy2HQmBFxJTw07SX7pzrfDgizie0j97E_nD135-aPqAtTN1w" />
+                                    src="images/dimas.jpg" />
                             </div>
-                            <h3 class="text-[#101814] text-xs font-bold text-center">Rian S.</h3>
-                            <p class="text-gray-500 text-[10px] text-center mt-1">Filsafat</p>
+                            <h3 class="text-[#101814] text-xs font-bold text-center">Dimas Husna Razizka</h3>
+                            <p class="text-gray-500 text-[10px] text-center mt-1">Teknik Lingkungan</p>
+                            <p class="text-gray-400 text-[10px] text-center">Universitas Bakrie</p>
                         </div>
                         <div
                             class="flex flex-col items-center bg-white rounded-lg p-3 border border-bronze/50 hover:bg-gray-50 transition-colors">
@@ -331,32 +338,29 @@
                         <div class="flex items-center gap-4 bg-white rounded-xl p-4 shadow-sm">
                             <div class="w-16 h-16 shrink-0 rounded-full overflow-hidden bg-gray-100">
                                 <img alt="Guest Portrait" class="w-full h-full object-cover opacity-80"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH1thZWtuXzXwcwYxn_DeL4AMpvrtZPrTirRCCwz6O2a4h-RNXIxVnfCb0IibUtLfF3oCDYbeqLajrEfrWrrVwOY3Mba3mYOPs3TJ4bzM1yPhN1Q9t8nrHfPx-OR5H7rgiqZdc-cxkNsvs2sAmlK8ndl_fXdpl7xV8SyuUH45ZF78tbNFUBQCK5ON-u0pmnr6PqvzP6tHApRDpEqyRfgqa4rvofNqRlSD9nBFJaQGs79_GwF4STKcl0JRcoUnO3QlNY-W_6i2ZYw" />
+                                    src="images/raffi.JPG" />
                             </div>
                             <div>
-                                <h3 class="text-[#101814] text-sm font-bold">Tamu Asrama 1</h3>
-                                <p class="text-gray-500 text-xs mt-1">Peneliti Tamu</p>
-                                <div
-                                    class="mt-2 inline-flex px-2 py-0.5 rounded bg-gray-100 text-[10px] text-gray-500 font-medium">
-                                    Sementara</div>
+                                <h3 class="text-[#101814] text-sm font-bold">Muhammad Raffi Rahman</h3>
+                                <p class="text-gray-500 text-xs mt-1">Teknik Informatika</p>
+                                <p class="text-gray-400 text-[10px] text-center">Universitas IndraPrasta PGRI</p>
                             </div>
-                        </div>
-                        <div class="flex items-center gap-4 bg-white rounded-xl p-4 shadow-sm">
-                            <div class="w-16 h-16 shrink-0 rounded-full overflow-hidden bg-gray-100">
-                                <img alt="Guest Portrait" class="w-full h-full object-cover opacity-80"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwERULaRfuBqnBgQfy21qeqk_jM9LEkEg1FEysFhvBjhGiJ7ux-AEqFT0O-QKUVgg6xgk0Q_85KvD2OcFK9pSBHEThX9LWPzKuR_A9UOwqryGZSd7jz_PYt9oGWMR72Zbpt_qZ6XE9YYaIy_g69Vcd1iW5ZemsDzX3AM5ekVAJLx1wADeDmBz9gMRyPhVtQC0M5Q6CSNFXDNyLQqRu7tR2rZT_slnxIlvd4OMRqQs7qScLY5zPI7Os5HkqZkxUhOTMqGiVLzTsgA" />
-                            </div>
-                            <div>
-                                <h3 class="text-[#101814] text-sm font-bold">Tamu Asrama 2</h3>
-                                <p class="text-gray-500 text-xs mt-1">Mahasiswa Exchange</p>
-                                <div
-                                    class="mt-2 inline-flex px-2 py-0.5 rounded bg-gray-100 text-[10px] text-gray-500 font-medium">
-                                    Sementara</div>
+                            <div class="flex items-center gap-4 bg-white rounded-xl p-4 shadow-sm">
+                                <div class="w-16 h-16 shrink-0 rounded-full overflow-hidden bg-gray-100">
+                                    <img alt="Guest Portrait" class="w-full h-full object-cover opacity-80"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwERULaRfuBqnBgQfy21qeqk_jM9LEkEg1FEysFhvBjhGiJ7ux-AEqFT0O-QKUVgg6xgk0Q_85KvD2OcFK9pSBHEThX9LWPzKuR_A9UOwqryGZSd7jz_PYt9oGWMR72Zbpt_qZ6XE9YYaIy_g69Vcd1iW5ZemsDzX3AM5ekVAJLx1wADeDmBz9gMRyPhVtQC0M5Q6CSNFXDNyLQqRu7tR2rZT_slnxIlvd4OMRqQs7qScLY5zPI7Os5HkqZkxUhOTMqGiVLzTsgA" />
+                                </div>
+                                <div>
+                                    <h3 class="text-[#101814] text-sm font-bold">Tamu Asrama 2</h3>
+                                    <p class="text-gray-500 text-xs mt-1">Mahasiswa Exchange</p>
+                                    <div
+                                        class="mt-2 inline-flex px-2 py-0.5 rounded bg-gray-100 text-[10px] text-gray-500 font-medium">
+                                        Sementara</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </main>
         <section class="bg-primary/5 py-16 overflow-hidden border-t border-primary/10">
             <div class="max-w-[1280px] mx-auto px-6 lg:px-10 mb-10 flex justify-between items-end">
@@ -460,9 +464,8 @@
                     <!-- Column 1: Brand -->
                     <div class="flex flex-col gap-4">
                         <div class="flex items-center gap-3">
-                            <div
-                                class="flex size-10 items-center justify-center rounded-lg bg-primary text-background-dark shadow-md">
-                                <span class="material-symbols-outlined">mosque</span>
+                            <div class="flex items-center justify-center size-12 overflow-hidden rounded-lg shadow-sm">
+                                <img src="images/logo2.png" alt="Logo Asrama" class="h-full w-full object-cover">
                             </div>
                             <h2 class="text-lg font-bold">Asrama Sunan Gunung Jati</h2>
                         </div>
@@ -478,7 +481,8 @@
                         <ul class="flex flex-col gap-3 text-sm text-slate-300">
                             <li><a class="hover:text-primary transition-colors flex items-center gap-2"
                                     href="profil.html"><span
-                                        class="material-symbols-outlined text-xs">chevron_right</span> Profil</a>
+                                        class="material-symbols-outlined text-xs">chevron_right</span>
+                                    Profil</a>
                             </li>
                             <li><a class="hover:text-primary transition-colors flex items-center gap-2"
                                     href="penghuni.html"><span
@@ -490,7 +494,8 @@
                             </li>
                             <li><a class="hover:text-primary transition-colors flex items-center gap-2"
                                     href="berita.html"><span
-                                        class="material-symbols-outlined text-xs">chevron_right</span> Berita</a></li>
+                                        class="material-symbols-outlined text-xs">chevron_right</span>
+                                    Berita</a></li>
                         </ul>
                     </div>
                     <!-- Column 3: Contact Info -->
@@ -544,6 +549,7 @@
             </div>
         </footer>
     </div>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
