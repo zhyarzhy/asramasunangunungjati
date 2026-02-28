@@ -52,38 +52,27 @@
             },
         }
     </script>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        .scrollbar-hide::-webkit-scrollbar {
-            display: none;
-        }
-
-        .scrollbar-hide {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body
     class="bg-background-light dark:bg-background-dark font-display text-slate-800 antialiased selection:bg-primary/30 selection:text-islamic-green">
-    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+    <div class="relative flex w-full flex-col overflow-x-hidden">
         <!-- Navigation -->
         <header class="sticky top-0 z-50 w-full border-b border-[#ebefed] bg-white px-4 md:px-10 py-3 shadow-sm">
             <div class="mx-auto flex max-w-7xl items-center justify-between">
+
                 <div class="flex items-center gap-4 text-primary-dark">
-                    <div class="flex items-center justify-center size-12 bg-[#1a472a] rounded-lg shadow-sm">
-                        <span class="material-symbols-outlined text-white text-3xl">mosque</span>
+                    <div class="flex items-center justify-center size-12 overflow-hidden rounded-lg shadow-sm">
+                        <img src="images/logo2.png" alt="Logo Asrama" class="h-full w-full object-cover">
                     </div>
                     <div class="flex flex-col">
                         <h2 class="text-[#1a472a] text-xl font-bold leading-tight tracking-tight">Asrama Sunan Gunung
                             Jati</h2>
-                        <span class="text-gray-500 text-xs font-medium tracking-wide">Membangun Karakter Islami</span>
+                        <span class="text-gray-500 text-xs font-medium tracking-wide">Membangun Future Leader</span>
                     </div>
                 </div>
+
                 <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
                     <nav class="flex items-center gap-8">
                         <a class="text-[#1a472a] text-sm font-bold border-b-2 border-[#d4af37] pb-0.5"
@@ -91,7 +80,7 @@
                         <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold transition-colors"
                             href="Profil.html">Profil</a>
                         <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold transition-colors"
-                            href="Penghuni.html">Penghuni</a>
+                            href="Penghuni.html">Warga</a>
                         <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold transition-colors"
                             href="Kegiatan.html">Kegiatan</a>
                         <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold transition-colors"
@@ -100,9 +89,31 @@
                             href="#Kontak">Kontak</a>
                     </nav>
                 </div>
+
+                <button id="mobile-menu-btn"
+                    class="flex md:hidden items-center justify-center p-2 text-[#1a472a] hover:bg-slate-100 rounded-lg transition-colors">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+            <div id="mobile-menu"
+                class="hidden md:hidden absolute left-0 top-[73px] w-full bg-white border-b border-[#ebefed] shadow-lg animate-fade-in-down z-40">
+                <nav class="flex flex-col p-4 gap-4">
+                    <a class="text-[#1a472a] text-sm font-bold px-4 py-2 bg-slate-50 rounded-lg"
+                        href="index.html">Home</a>
+                    <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold px-4 py-2 transition-colors hover:bg-slate-50 rounded-lg"
+                        href="Profil.html">Profil</a>
+                    <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold px-4 py-2 transition-colors hover:bg-slate-50 rounded-lg"
+                        href="Penghuni.html">Warga</a>
+                    <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold px-4 py-2 transition-colors hover:bg-slate-50 rounded-lg"
+                        href="Kegiatan.html">Kegiatan</a>
+                    <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold px-4 py-2 transition-colors hover:bg-slate-50 rounded-lg"
+                        href="Berita.html">Berita</a>
+                    <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold px-4 py-2 transition-colors hover:bg-slate-50 rounded-lg"
+                        href="#Kontak">Kontak</a>
+                </nav>
             </div>
         </header>
-        <main class="flex-grow">
+        <main class="flex-grow pt-1">
             <!-- Hero Section -->
             <section class="relative h-[600px] w-full overflow-hidden">
                 <!-- Background Image with Overlay -->
@@ -150,7 +161,7 @@
                             <img alt="Modern architectural building of the dormitory with green surroundings"
                                 class="relative z-10 w-full rounded-2xl object-cover shadow-xl aspect-[4/3]"
                                 data-alt="Modern architectural building of the dormitory with green surroundings"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEiXBRFZif0u3zohV6JkSvmLF9LTLhZw6T1sYOWWEv2HX2fae3KQneMObH0lT6PcPuPcvDCPwY3dEg6ElXIQVIwzwA2tZrkA3kx1kJlqaOgUGtOK5hb6TSxJg4II3P2Bd_fvDLTJ3NekQF_W7CxJGjndYv6-aFWXxt4eq8m9RPWZaXQC7JE4GZA-S7Sr51cSJ6nVcKeeop7sQoKIm1B0L4JwLz-_rjQekpEYa__lrvfbS4LPMt1r1xCD1kcHJg1Ox7-BuNPhJsFQ" />
+                                src="images/bayt2.jpeg" />
                             <div
                                 class="absolute -bottom-6 -right-6 z-20 rounded-xl bg-white p-6 shadow-lg border border-slate-100 max-w-xs hidden md:block">
                                 <div class="flex items-center gap-4">
@@ -177,7 +188,7 @@
                             <p class="text-slate-600 text-lg leading-relaxed">
                                 Didirikan dengan visi mulia untuk melahirkan pemimpin masa depan yang berakhlak mulia
                                 dan berwawasan luas. Sejarah kami adalah cerita tentang dedikasi, persaudaraan, dan
-                                keunggulan akademik yang terus bertumbuh sejak tahun 1990.
+                                keunggulan akademik yang terus bertumbuh sejak tahun 1952.
                             </p>
                             <p class="text-slate-600 text-lg leading-relaxed">
                                 Kami percaya bahwa lingkungan yang kondusif adalah kunci keberhasilan. Di sini, tradisi
@@ -476,9 +487,8 @@
                     <!-- Column 1: Brand -->
                     <div class="flex flex-col gap-4">
                         <div class="flex items-center gap-3">
-                            <div
-                                class="flex size-10 items-center justify-center rounded-lg bg-primary text-background-dark shadow-md">
-                                <span class="material-symbols-outlined">mosque</span>
+                            <div class="flex items-center justify-center size-12 overflow-hidden rounded-lg shadow-sm">
+                                <img src="images/logo2.png" alt="Logo Asrama" class="h-full w-full object-cover">
                             </div>
                             <h2 class="text-lg font-bold">Asrama Sunan Gunung Jati</h2>
                         </div>
@@ -494,7 +504,8 @@
                         <ul class="flex flex-col gap-3 text-sm text-slate-300">
                             <li><a class="hover:text-primary transition-colors flex items-center gap-2"
                                     href="profil.html"><span
-                                        class="material-symbols-outlined text-xs">chevron_right</span> Profil</a>
+                                        class="material-symbols-outlined text-xs">chevron_right</span>
+                                    Profil</a>
                             </li>
                             <li><a class="hover:text-primary transition-colors flex items-center gap-2"
                                     href="penghuni.html"><span
@@ -506,7 +517,8 @@
                             </li>
                             <li><a class="hover:text-primary transition-colors flex items-center gap-2"
                                     href="berita.html"><span
-                                        class="material-symbols-outlined text-xs">chevron_right</span> Berita</a></li>
+                                        class="material-symbols-outlined text-xs">chevron_right</span>
+                                    Berita</a></li>
                         </ul>
                     </div>
                     <!-- Column 3: Contact Info -->
@@ -561,26 +573,6 @@
         </footer>
     </div>
 </body>
-<script>
-    // Ambil elemen pembungkus kartu alumni
-    const scrollContainer = document.querySelector('.animate-\\[scroll_40s_linear_infinite\\]');
-
-    // Fitur: Duplikasi Konten Otomatis
-    // Ini buat mastiin gak ada gap/kosong pas animasi selesai satu putaran
-    if (scrollContainer) {
-        const content = scrollContainer.innerHTML;
-        scrollContainer.innerHTML = content + content; // Duplikasi isi kartu
-    }
-
-    // Fitur: Pause saat Hover
-    // Biar sponsor atau calon penghuni bisa baca testimoni pas mouse di atas kartu
-    scrollContainer.addEventListener('mouseenter', () => {
-        scrollContainer.style.animationPlayState = 'paused';
-    });
-
-    scrollContainer.addEventListener('mouseleave', () => {
-        scrollContainer.style.animationPlayState = 'running';
-    });
-</script>
+<script src="js/script.js"></script>
 
 </html>
