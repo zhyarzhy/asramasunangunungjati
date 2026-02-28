@@ -1,0 +1,157 @@
+/* ============================================
+   Global Styles - Asrama Sunan Gunung Jati
+   ============================================ */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ============================================
+   Scrollbar Utilities (index.html, Penghuni.html)
+   ============================================ */
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* ============================================
+   Custom Scrollbar (Kegiatan.html)
+   ============================================ */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1B4D3E;
+    border-radius: 4px;
+}
+
+/* ============================================
+   Hero Pattern (Kegiatan.html)
+   ============================================ */
+
+.hero-pattern {
+    background-color: #1B4D3E;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ============================================
+   Org Chart Tree Lines (Profil.html)
+   ============================================ */
+
+.tree-line::before {
+    content: '';
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 24px;
+    background-color: #ebefed;
+}
+
+.tree-parent::after {
+    content: '';
+    position: absolute;
+    bottom: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 24px;
+    background-color: #ebefed;
+}
+
+.tree-connector {
+    position: absolute;
+    top: -24px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #ebefed;
+}
+
+.tree-connector-center {
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 24px;
+    width: 2px;
+    background-color: #ebefed;
+}
+
+.vertical-connector {
+    width: 2px;
+    background-color: #ebefed;
+    margin: 0 auto;
+    height: 48px;
+}
+
+/* ============================================
+   Detail Berita Page (Detail_berita.html)
+   ============================================ */
+
+.drop-cap::first-letter {
+    float: left;
+    font-size: 3.5rem;
+    line-height: 0.85;
+    font-weight: 800;
+    padding-right: 0.75rem;
+    padding-top: 0.25rem;
+    color: #0fbd55;
+}
+
+.floating-icon {
+    position: absolute;
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.article-content h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: #0d1b13;
+}
+
+.dark .article-content h2 {
+    color: #f1f5f9;
+}
+
+.article-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    color: #334155;
+}
+
+.dark .article-content p {
+    color: #cbd5e1;
+}
+
+.article-content blockquote {
+    border-left: 4px solid #D4AF37;
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #475569;
+    background: rgba(212, 175, 55, 0.05);
+    padding: 1.5rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.dark .article-content blockquote {
+    color: #94a3b8;
+    background: rgba(212, 175, 55, 0.1);
+}
