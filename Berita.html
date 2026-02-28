@@ -44,14 +44,11 @@
         }
     </script>
     <style type="text/tailwindcss">
-        html {
-            scroll-behavior: smooth;
-        }
-
         .carousel-container {
             mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
         }
     </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body
@@ -59,15 +56,16 @@
     <header class="sticky top-0 z-50 w-full border-b border-[#ebefed] bg-white px-4 md:px-10 py-3 shadow-sm">
         <div class="mx-auto flex max-w-7xl items-center justify-between">
             <div class="flex items-center gap-4 text-primary-dark">
-                <div class="flex items-center justify-center size-12 bg-[#1a472a] rounded-lg shadow-sm">
-                    <span class="material-symbols-outlined text-white text-3xl">mosque</span>
+                <div class="flex items-center justify-center size-12 overflow-hidden rounded-lg shadow-sm">
+                    <img src="images/logo2.png" alt="Logo Asrama" class="h-full w-full object-cover">
                 </div>
                 <div class="flex flex-col">
                     <h2 class="text-[#1a472a] text-xl font-bold leading-tight tracking-tight">Asrama Sunan Gunung
                         Jati</h2>
-                    <span class="text-gray-500 text-xs font-medium tracking-wide">Membangun Karakter Islami</span>
+                    <span class="text-gray-500 text-xs font-medium tracking-wide">Membangun Future Leader</span>
                 </div>
             </div>
+            <!-- Desktop Navigation -->
             <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
                 <nav class="flex items-center gap-8">
                     <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold transition-colors"
@@ -75,7 +73,7 @@
                     <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold transition-colors"
                         href="Profil.html">Profil</a>
                     <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold transition-colors"
-                        href="Penghuni.html">Penghuni</a>
+                        href="Penghuni.html">Warga</a>
                     <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold transition-colors"
                         href="Kegiatan.html">Kegiatan</a>
                     <a class="text-[#1a472a] text-sm font-bold border-b-2 border-[#d4af37] pb-0.5"
@@ -84,6 +82,32 @@
                         href="#Kontak">Kontak</a>
                 </nav>
             </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn"
+                class="flex md:hidden items-center justify-center p-2 text-[#1a472a] hover:bg-slate-100 rounded-lg transition-colors">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute left-0 top-[73px] w-full bg-white border-b border-[#ebefed] shadow-lg z-40">
+            <nav class="flex flex-col p-4 gap-4">
+                <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold px-4 py-2 transition-colors hover:bg-slate-50 rounded-lg"
+                    href="index.html">Home</a>
+                <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold px-4 py-2 transition-colors hover:bg-slate-50 rounded-lg"
+                    href="Profil.html">Profil</a>
+                <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold px-4 py-2 transition-colors hover:bg-slate-50 rounded-lg"
+                    href="Penghuni.html">Warga</a>
+                <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold px-4 py-2 transition-colors hover:bg-slate-50 rounded-lg"
+                    href="Kegiatan.html">Kegiatan</a>
+                <a class="text-[#1a472a] text-sm font-bold px-4 py-2 bg-slate-50 rounded-lg"
+                    href="Berita.html">Berita</a>
+                <a class="text-[#677e70] hover:text-[#1a472a] text-sm font-semibold px-4 py-2 transition-colors hover:bg-slate-50 rounded-lg"
+                    href="#Kontak">Kontak</a>
+            </nav>
+        </div>
         </div>
     </header>
     <main class="flex-grow">
@@ -546,9 +570,8 @@
                 <!-- Column 1: Brand -->
                 <div class="flex flex-col gap-4">
                     <div class="flex items-center gap-3">
-                        <div
-                            class="flex size-10 items-center justify-center rounded-lg bg-primary text-background-dark shadow-md">
-                            <span class="material-symbols-outlined">mosque</span>
+                        <div class="flex items-center justify-center size-12 overflow-hidden rounded-lg shadow-sm">
+                            <img src="images/logo2.png" alt="Logo Asrama" class="h-full w-full object-cover">
                         </div>
                         <h2 class="text-lg font-bold">Asrama Sunan Gunung Jati</h2>
                     </div>
@@ -629,6 +652,7 @@
         </div>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 
 </html>
